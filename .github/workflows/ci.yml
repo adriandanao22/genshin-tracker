@@ -17,14 +17,17 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - name: Typecheck
-        run: npx tsc --noEmit
-      - name: Lint (non-blocking)
-        run: npm run lint
-        continue-on-error: true
+      # Build first: `next build` type-checks AND generates next-env.d.ts +
+      # .next/types, which the standalone tsc step below needs. (next-env.d.ts
+      # is gitignored, so on a clean checkout it doesn't exist yet.)
       - name: Build
         run: npm run build
         env:
           # Not used at build time (routes read env at request time); a dummy
           # keeps any accidental build-time access from failing CI.
           HOYOLAB_SESSION_SECRET: ci-build-placeholder
+      - name: Typecheck
+        run: npx tsc --noEmit
+      - name: Lint (non-blocking)
+        run: npm run lint
+        continue-on-error: true
