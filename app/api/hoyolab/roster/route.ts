@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { fetchRoster, type RosterCharacter } from "@/lib/hoyolab-game-record";
+import { getEnkaProfile, EnkaError } from "@/lib/enka";
 import {
   getSessionFromRequest,
   recordErrorResponse,
@@ -18,6 +19,21 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  const refresh = request.nextUrl.searchParams.get("refresh") === "1";
+
+  if (session.mode === "enka") {
+    try {
+      const profile = await getEnkaProfile(session.uid, refresh);
+      return NextResponse.json({ characters: profile.roster, source: "enka" });
+    } catch (error) {
+      return NextResponse.json(
+        { error: error instanceof EnkaError ? error.message : "Enka fetch failed" },
+        { status: 502 },
+      );
+    }
+  }
+
+  if (refresh) cache.delete(session.uid);
   const cached = cache.get(session.uid);
   if (cached && cached.expires > Date.now()) {
     return NextResponse.json({ characters: cached.roster, cached: true });

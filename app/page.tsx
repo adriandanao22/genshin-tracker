@@ -9,6 +9,7 @@ import { loadPriority, savePriority } from "@/lib/priority";
 import {
   hydrateUserData,
   syncPriority,
+  syncInventory,
   pushUserData,
 } from "@/lib/user-sync";
 import {
@@ -16,11 +17,16 @@ import {
   saveActiveComp,
   type ActiveComp,
 } from "@/lib/active-comp";
+import {
+  loadInventory,
+  saveInventory,
+  type Inventory,
+} from "@/lib/inventory";
 import { CharacterDetailModal } from "./components/character-detail-modal";
 import { BuildGuidesPage } from "./components/build-guides-page";
 import { TeamPlannerPage } from "./components/team-planner-page";
-import { LineupsPanel } from "./components/lineups-panel";
 import { OverviewDashboard } from "./components/overview-dashboard";
+import { InventoryPage } from "./components/inventory-page";
 import { RosterWall } from "./components/roster-wall";
 
 type Player = {
@@ -114,21 +120,23 @@ export default function Home() {
   const [connected, setConnected] = useState(false);
   const [activeTab, setActiveTab] = useState("Overview");
   const [connectionOpen, setConnectionOpen] = useState(false);
-  const [connectionMode, setConnectionMode] = useState<"hoyolab" | "manual">(
-    "hoyolab",
+  const [connectionMode, setConnectionMode] = useState<"hoyolab" | "uid">(
+    "uid",
   );
   const [connectionState, setConnectionState] = useState<
     "idle" | "connecting" | "captcha" | "error"
   >("idle");
   const [connectionError, setConnectionError] = useState("");
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
-  const [cookieForm, setCookieForm] = useState({ ltuid: "", ltoken: "" });
+  const [uidForm, setUidForm] = useState("");
   const [roster, setRoster] = useState<RosterCharacter[] | null>(null);
   const [rosterError, setRosterError] = useState("");
   const [priorityIds, setPriorityIds] = useState<number[]>([]);
   const [activeComp, setActiveComp] = useState<ActiveComp | null>(null);
+  const [inventory, setInventory] = useState<Inventory | null>(null);
   const [plansVersion, setPlansVersion] = useState(0);
   const [detailOpen, setDetailOpen] = useState(false);
+  const [openCharId, setOpenCharId] = useState<number | null>(null);
   const [characterDetail, setCharacterDetail] =
     useState<CharacterDetail | null>(null);
   const [detailError, setDetailError] = useState("");
@@ -181,6 +189,7 @@ export default function Home() {
         if (cancelled) return;
         setPriorityIds(loadPriority(player.uid));
         setActiveComp(loadActiveComp(player.uid));
+        setInventory(loadInventory(player.uid));
         setRosterError("");
       })
       .catch((error: unknown) => {
@@ -205,6 +214,14 @@ export default function Home() {
       syncPriority(next);
       return next;
     });
+  }
+
+  function updateInventory(next: Inventory | null) {
+    setInventory(next);
+    saveInventory(player.uid, next);
+    syncInventory(next);
+    // Overview "still needed" figures depend on inventory.
+    setPlansVersion((version) => version + 1);
   }
 
   function chooseActiveComp(comp: ActiveComp | null) {
@@ -240,12 +257,15 @@ export default function Home() {
     pushUserData({ priority: nextPriority, activeComp: nextComp });
   }
 
-  async function openCharacter(characterId: number) {
+  async function openCharacter(characterId: number, refresh = false) {
     setDetailOpen(true);
+    setOpenCharId(characterId);
     setCharacterDetail(null);
     setDetailError("");
     try {
-      const response = await fetch(`/api/hoyolab/roster/${characterId}`);
+      const response = await fetch(
+        `/api/hoyolab/roster/${characterId}${refresh ? "?refresh=1" : ""}`,
+      );
       const data = await response.json();
       if (!response.ok)
         throw new Error(data.error || "Could not load this character.");
@@ -256,6 +276,31 @@ export default function Home() {
           ? error.message
           : "Could not load this character.",
       );
+    }
+  }
+
+  const [refreshing, setRefreshing] = useState(false);
+
+  // Pull a fresh roster past every cache (ours + Enka's), for when you've just
+  // changed a build in-game and want to see it now instead of waiting out the
+  // 5-min cache. The character modal has its own per-character refresh.
+  async function refreshRoster() {
+    if (refreshing) return;
+    setRefreshing(true);
+    try {
+      const response = await fetch("/api/hoyolab/roster?refresh=1");
+      const data = await response.json();
+      if (!response.ok)
+        throw new Error(data.error || "Could not refresh your roster.");
+      setRoster(data.characters);
+      setRosterError("");
+      setPlansVersion((version) => version + 1);
+    } catch (error) {
+      setRosterError(
+        error instanceof Error ? error.message : "Could not refresh your roster.",
+      );
+    } finally {
+      setRefreshing(false);
     }
   }
 
@@ -271,7 +316,7 @@ export default function Home() {
     setConnectionOpen(false);
     setConnectionState("idle");
     setLoginForm({ email: "", password: "" });
-    setCookieForm({ ltuid: "", ltoken: "" });
+    setUidForm("");
   }
 
   function solveCaptcha(captcha: GeetestChallenge) {
@@ -341,18 +386,18 @@ export default function Home() {
     }
   }
 
-  async function submitCookies() {
+  async function submitUid() {
     setConnectionState("connecting");
     setConnectionError("");
     try {
-      const response = await fetch("/api/hoyolab/connect", {
+      const response = await fetch("/api/hoyolab/connect-uid", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(cookieForm),
+        body: JSON.stringify({ uid: uidForm }),
       });
       const data = await response.json();
       if (!response.ok)
-        throw new Error(data.error || "Could not connect to HoYoLAB.");
+        throw new Error(data.error || "Could not connect by UID.");
       completeConnection(data.player);
     } catch (error) {
       failConnection(error);
@@ -361,8 +406,8 @@ export default function Home() {
 
   function connectHoyoLab(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (connectionMode === "hoyolab") submitLogin();
-    else submitCookies();
+    if (connectionMode === "uid") submitUid();
+    else submitLogin();
   }
 
   async function disconnect() {
@@ -397,7 +442,7 @@ export default function Home() {
         </div>
         <div className="workspace-label">PLAYER WORKSPACE</div>
         <nav className="nav-list" aria-label="Main navigation">
-          {["Overview", "My roster", "Build guides", "Teams"].map(
+          {["Overview", "My roster", "Build guides", "Teams", "Inventory"].map(
             (tab) => (
               <button
                 className={`nav-item ${activeTab === tab ? "is-active" : ""}`}
@@ -438,6 +483,17 @@ export default function Home() {
             <h1>Good evening, {player.name}</h1>
           </div>
           <div className="topbar-actions">
+            {connected && (
+              <button
+                className="link-button refresh-button"
+                onClick={refreshRoster}
+                disabled={refreshing}
+                title="Fetch the latest build data now, bypassing the cache"
+              >
+                <span className={refreshing ? "spin" : ""}>↻</span>{" "}
+                {refreshing ? "Refreshing…" : "Refresh"}
+              </button>
+            )}
             <span className="sync-status">
               <span className="status-dot" />
               {connected ? `Synced ${player.updated}` : "Preview data"}
@@ -462,7 +518,6 @@ export default function Home() {
               onTogglePriority={togglePriority}
               onConnect={() => setConnectionOpen(true)}
             />
-            <LineupsPanel roster={roster} connected={connected} />
           </div>
         )}
         {activeTab === "Build guides" && (
@@ -492,9 +547,24 @@ export default function Home() {
             roster={roster}
             connected={connected}
             priorityIds={priorityIds}
+            activeComp={activeComp}
+            inventory={inventory}
             plansVersion={plansVersion}
             onOpen={openCharacter}
             onManagePriority={() => setActiveTab("My roster")}
+            onManageInventory={() => setActiveTab("Inventory")}
+            onConnect={() => setConnectionOpen(true)}
+          />
+        )}
+        {activeTab === "Inventory" && (
+          <InventoryPage
+            uid={player.uid}
+            connected={connected}
+            roster={roster}
+            priorityIds={priorityIds}
+            activeComp={activeComp}
+            inventory={inventory}
+            onChange={updateInventory}
             onConnect={() => setConnectionOpen(true)}
           />
         )}
@@ -541,11 +611,18 @@ export default function Home() {
             ) : (
               <>
                 <p className="modal-intro">
-                  {connectionMode === "hoyolab"
-                    ? "Sign in with your HoYoLAB account. Your password is only forwarded to HoYoLAB for login and never stored."
-                    : "Paste your HoYoLAB cookies. They are verified server-side and stored only in an encrypted HTTP-only session."}
+                  {connectionMode === "uid"
+                    ? "Just your in-game UID — we read your public Character Showcase from Enka.network. No login, no password, nothing to store."
+                    : "Sign in with your HoYoLAB account for your full roster and live resin. Your password is only forwarded to HoYoLAB and never stored."}
                 </p>
                 <div className="filter-tabs mode-tabs">
+                  <button
+                    type="button"
+                    className={connectionMode === "uid" ? "active-filter" : ""}
+                    onClick={() => setConnectionMode("uid")}
+                  >
+                    Connect via UID
+                  </button>
                   <button
                     type="button"
                     className={
@@ -554,15 +631,6 @@ export default function Home() {
                     onClick={() => setConnectionMode("hoyolab")}
                   >
                     Login via HoYoLAB
-                  </button>
-                  <button
-                    type="button"
-                    className={
-                      connectionMode === "manual" ? "active-filter" : ""
-                    }
-                    onClick={() => setConnectionMode("manual")}
-                  >
-                    Manual cookies
                   </button>
                 </div>
                 <form onSubmit={connectHoyoLab} className="connection-form">
@@ -602,40 +670,20 @@ export default function Home() {
                       </label>
                     </>
                   ) : (
-                    <>
-                      <label className="full-width">
-                        ltuid_v2
-                        <input
-                          required
-                          type="password"
-                          autoComplete="off"
-                          placeholder="Paste cookie value"
-                          value={cookieForm.ltuid}
-                          onChange={(event) =>
-                            setCookieForm({
-                              ...cookieForm,
-                              ltuid: event.target.value,
-                            })
-                          }
-                        />
-                      </label>
-                      <label className="full-width">
-                        ltoken_v2
-                        <input
-                          required
-                          type="password"
-                          autoComplete="off"
-                          placeholder="Paste cookie value"
-                          value={cookieForm.ltoken}
-                          onChange={(event) =>
-                            setCookieForm({
-                              ...cookieForm,
-                              ltoken: event.target.value,
-                            })
-                          }
-                        />
-                      </label>
-                    </>
+                    <label className="full-width">
+                      In-game UID
+                      <input
+                        required
+                        inputMode="numeric"
+                        pattern="\d*"
+                        autoComplete="off"
+                        placeholder="e.g. 800000000"
+                        value={uidForm}
+                        onChange={(event) =>
+                          setUidForm(event.target.value.replace(/\D/g, ""))
+                        }
+                      />
+                    </label>
                   )}
                   {connectionState === "captcha" && (
                     <p className="form-hint" role="status">
@@ -650,19 +698,21 @@ export default function Home() {
                   )}
                   <button className="primary-button form-submit" disabled={busy}>
                     {connectionState === "connecting"
-                      ? "Checking HoYoLAB..."
+                      ? connectionMode === "uid"
+                        ? "Looking up UID..."
+                        : "Checking HoYoLAB..."
                       : connectionState === "captcha"
                         ? "Waiting for captcha..."
                         : connectionMode === "hoyolab"
                           ? "Sign in and connect"
-                          : "Verify and connect"}
+                          : "Connect by UID"}
                     <span>→</span>
                   </button>
                 </form>
                 <p className="privacy-note">
                   {connectionMode === "hoyolab"
                     ? "Your UID and server are detected automatically. Only the login cookies HoYoLAB returns are kept, encrypted, on this browser."
-                    : "Never share these values in chat or screenshots. You can revoke them from HoYoLAB at any time."}
+                    : "Your UID is public — it only reads what your in-game Showcase already shares. No login, no credentials, nothing sensitive stored."}
                 </p>
               </>
             )}
@@ -687,6 +737,11 @@ export default function Home() {
           }
           activeComp={activeComp}
           error={detailError}
+          onRefresh={
+            openCharId != null
+              ? () => openCharacter(openCharId, true)
+              : undefined
+          }
           onClose={() => {
             setDetailOpen(false);
             setCharacterDetail(null);

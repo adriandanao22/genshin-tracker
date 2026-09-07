@@ -293,6 +293,7 @@ export function CharacterDetailModal({
   ownedWeapons = [],
   activeComp = null,
   error,
+  onRefresh,
   onClose,
 }: {
   uid: string;
@@ -301,9 +302,14 @@ export function CharacterDetailModal({
   ownedWeapons?: Array<{ name: string; refinement: number; holder: string }>;
   activeComp?: ActiveComp | null;
   error: string;
+  onRefresh?: () => void;
   onClose: () => void;
 }) {
   const [tab, setTab] = useState<"build" | "guide">("build");
+  // A refresh nulls the detail in the parent then reloads it, so "waiting for
+  // fresh data" is simply: a character is open (onRefresh exists) but detail
+  // hasn't arrived yet and there's no error.
+  const refreshing = Boolean(onRefresh) && !detail && !error;
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
   const owned = useMemo(() => new Set(ownedIds), [ownedIds]);
   // Weapons the player actually has (equipped across their roster — the only
@@ -903,6 +909,17 @@ export function CharacterDetailModal({
         aria-modal="true"
         aria-labelledby="character-detail-title"
       >
+        {onRefresh && (
+          <button
+            className="modal-refresh over-banner"
+            onClick={onRefresh}
+            disabled={!detail}
+            title="Fetch this character's latest build now, bypassing the cache"
+            aria-label="Refresh build data"
+          >
+            <span className={refreshing ? "spin" : ""}>↻</span>
+          </button>
+        )}
         <button
           className="modal-close over-banner"
           onClick={onClose}

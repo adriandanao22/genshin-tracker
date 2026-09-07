@@ -20,7 +20,61 @@ import {
 } from "@/lib/farming";
 import type { CharacterDetail, RosterCharacter } from "@/lib/hoyolab-game-record";
 import { loadPlan } from "@/lib/plans";
+import {
+  findSet,
+  loadBuildAssets,
+  setIconUrl,
+  type BuildAssets,
+} from "@/lib/build-assets";
+import { groupTeamsByArchetype, normalizeName } from "@/lib/character-guides";
+import type { ActiveComp } from "@/lib/active-comp";
+import type { LineupSuggestion } from "@/lib/hoyolab-lineup";
+import { ownedLookup, type Inventory } from "@/lib/inventory";
 import { elementTone } from "./character-detail-modal";
+
+type ResinNote = {
+  currentResin: number;
+  maxResin: number;
+  resinRecoveryTime: number;
+};
+
+function formatDuration(seconds: number) {
+  const m = Math.round(seconds / 60);
+  if (m <= 0) return "now";
+  const h = Math.floor(m / 60);
+  const mm = m % 60;
+  return h > 0 ? `${h}h ${mm}m` : `${mm}m`;
+}
+
+/** Live resin readout — counts down between the periodic refetches. */
+function ResinWidget({ note, fetchedAt }: { note: ResinNote; fetchedAt: number }) {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const id = setInterval(() => setNow(Date.now()), 30000);
+    return () => clearInterval(id);
+  }, []);
+  const elapsed = Math.max(0, (now - fetchedAt) / 1000);
+  const remaining = Math.max(0, note.resinRecoveryTime - elapsed);
+  const resin =
+    remaining > 0
+      ? Math.min(note.maxResin, note.maxResin - Math.ceil(remaining / 480))
+      : note.maxResin;
+  const pct = note.maxResin > 0 ? Math.round((resin / note.maxResin) * 100) : 0;
+  return (
+    <div className="resin-widget">
+      <span className="eyebrow">ORIGINAL RESIN</span>
+      <strong>
+        <span className="resin-dot" aria-hidden="true" />
+        {resin}
+        <i>/{note.maxResin}</i>
+      </strong>
+      <span className="resin-bar">
+        <span style={{ width: `${pct}%` }} />
+      </span>
+      <small>{remaining <= 0 ? "Full" : `Full in ${formatDuration(remaining)}`}</small>
+    </div>
+  );
+}
 
 // Leaflet is client-only and loaded on demand when the map modal opens.
 const DomainMapModal = dynamic(
@@ -176,9 +230,12 @@ export function OverviewDashboard({
   roster,
   connected,
   priorityIds,
+  activeComp,
+  inventory,
   plansVersion,
   onOpen,
   onManagePriority,
+  onManageInventory,
   onConnect,
 }: {
   uid: string;
@@ -187,13 +244,28 @@ export function OverviewDashboard({
   roster: RosterCharacter[] | null;
   connected: boolean;
   priorityIds: number[];
+  activeComp: ActiveComp | null;
+  inventory: Inventory | null;
   plansVersion: number;
   onOpen: (characterId: number) => void;
   onManagePriority: () => void;
+  onManageInventory: () => void;
   onConnect: () => void;
 }) {
   const [data, setData] = useState<FarmingData | null>(null);
   const [mapData, setMapData] = useState<MapData | null>(null);
+  const [buildAssets, setBuildAssets] = useState<BuildAssets | null>(null);
+  const [resin, setResin] = useState<{ note: ResinNote; fetchedAt: number } | null>(
+    null,
+  );
+  // Community-consensus top set per character (for "Follow guide" resolution,
+  // matching the character modal). Only fetched for non-curated characters.
+  const [consensusSets, setConsensusSets] = useState<Record<number, string>>({});
+  // The set a character runs in the active comp (matches the modal when a comp
+  // is being built), keyed by character id.
+  const [compSets, setCompSets] = useState<Record<number, string>>({});
+  // Material inventory (manually entered on the Inventory tab, or imported) —
+  // subtracted from what's owed so the plan shows what's actually left to farm.
   const [details, setDetails] = useState<Record<number, CharacterDetail>>({});
   const [selectedDay, setSelectedDay] = useState<string | null>(null);
   const [elementFilter, setElementFilter] = useState("All");
@@ -202,6 +274,23 @@ export function OverviewDashboard({
     region: string;
     location: string;
   } | null>(null);
+
+  // Members of the active team comp, so we can highlight the materials/sets
+  // being farmed for it across the plan. Match domain/boss contributors by name
+  // (that's all those rows carry) and artifact/character cards by id.
+  const compMemberIds = useMemo(
+    () => new Set((activeComp?.members ?? []).map((m) => m.id)),
+    [activeComp],
+  );
+  const compMemberNames = useMemo(
+    () =>
+      new Set(
+        (activeComp?.members ?? []).map((m) => m.name.trim().toLowerCase()),
+      ),
+    [activeComp],
+  );
+  const isCompName = (name: string) =>
+    compMemberNames.has(name.trim().toLowerCase());
 
   const today = serverWeekday(server);
   const day = selectedDay ?? today;
@@ -217,6 +306,9 @@ export function OverviewDashboard({
         if (!cancelled) setMapData(loaded);
       })
       .catch(() => {});
+    loadBuildAssets().then((loaded) => {
+      if (!cancelled) setBuildAssets(loaded);
+    });
     return () => {
       cancelled = true;
     };
@@ -244,6 +336,102 @@ export function OverviewDashboard({
     };
   }, [connected, priorityIds]);
 
+  // Live resin (real-time notes), refreshed every 5 minutes while connected.
+  useEffect(() => {
+    if (!connected) return;
+    let cancelled = false;
+    const load = () =>
+      fetch("/api/hoyolab/notes")
+        .then((response) => (response.ok ? response.json() : null))
+        .then((body) => {
+          if (!cancelled && body?.note)
+            setResin({ note: body.note, fetchedAt: Date.now() });
+        })
+        .catch(() => {});
+    load();
+    const id = setInterval(load, 5 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, [connected]);
+
+  // Consensus top set for priority characters without a curated guide, so
+  // "Follow guide" on the Overview matches what the character modal shows.
+  useEffect(() => {
+    if (!connected || !roster || priorityIds.length === 0) return;
+    let cancelled = false;
+    const targets = priorityIds.filter((id) => {
+      const character = roster.find((c) => c.id === id);
+      return character && !findGuide(character.name);
+    });
+    if (targets.length === 0) return;
+    Promise.all(
+      targets.map((id) =>
+        fetch(`/api/hoyolab/consensus/${id}`)
+          .then((response) => (response.ok ? response.json() : null))
+          .then((body) => ({
+            id,
+            set: body?.consensus?.sets?.[0]?.name as string | undefined,
+          }))
+          .catch(() => ({ id, set: undefined })),
+      ),
+    ).then((results) => {
+      if (cancelled) return;
+      const next: Record<number, string> = {};
+      for (const { id, set } of results) if (set) next[id] = set;
+      setConsensusSets(next);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [connected, priorityIds, roster]);
+
+  // The set each active-comp member runs IN that comp (from their lineups),
+  // so "Artifacts to Farm" matches the comp-driven set on the character page.
+  useEffect(() => {
+    if (!connected || !activeComp || !data) {
+      setCompSets({});
+      return;
+    }
+    let cancelled = false;
+    const elementOf = (name: string) =>
+      data.characters[normalizeName(name)]?.element ?? null;
+    const label = activeComp.label;
+    Promise.all(
+      activeComp.members.map((member) =>
+        fetch(`/api/hoyolab/teams/${member.id}`)
+          .then((response) => (response.ok ? response.json() : null))
+          .then((body) => {
+            const teams = (body?.teams ?? []) as LineupSuggestion[];
+            const groups = groupTeamsByArchetype(teams, member.id, elementOf, {
+              maxGroups: 50,
+              maxPerGroup: 999,
+            });
+            const group = groups.find((g) => g.label === label);
+            if (!group) return { id: member.id, set: undefined };
+            const counts = new Map<string, number>();
+            for (const entry of group.entries)
+              for (const set of entry.lineup.focusSets)
+                counts.set(set, (counts.get(set) ?? 0) + 1);
+            const top = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
+            return { id: member.id, set: top };
+          })
+          .catch(() => ({ id: member.id, set: undefined })),
+      ),
+    ).then((results) => {
+      if (cancelled) return;
+      const next: Record<number, string> = {};
+      for (const { id, set } of results) if (set) next[id] = set;
+      setCompSets(next);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [connected, activeComp, data]);
+
+  const owned = useMemo(() => ownedLookup(inventory), [inventory]);
+
   const plan = useMemo(() => {
     if (!data || !roster) return null;
     const prioritySet = new Set(priorityIds);
@@ -269,10 +457,10 @@ export function OverviewDashboard({
         targets: targetsFor(uid, character),
       });
     }
-    return buildFarmingPlan(entries, data.materials, day, today);
+    return buildFarmingPlan(entries, data.materials, day, today, owned);
     // plansVersion re-reads saved plans (targetsFor) after the modal closes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, roster, priorityIds, details, uid, day, today, plansVersion]);
+  }, [data, roster, priorityIds, details, uid, day, today, plansVersion, owned]);
 
   const visibleCharacters = useMemo(() => {
     if (!plan) return [];
@@ -283,6 +471,73 @@ export function OverviewDashboard({
       return true;
     });
   }, [plan, elementFilter, formableOnly]);
+
+  // Artifacts to farm per tracked character: their target set (plan → guide) and
+  // which Domain of Blessing drops it, grouped by set.
+  const artifactPlan = useMemo(() => {
+    if (!roster || !buildAssets) return [];
+    const bySet = new Map<
+      string,
+      {
+        name: string;
+        icon: string | null;
+        domain: string | null;
+        region: string | null;
+        characters: { id: number; name: string; icon: string }[];
+      }
+    >();
+    for (const id of priorityIds) {
+      const character = roster.find((c) => c.id === id);
+      if (!character) continue;
+      const guide = findGuide(character.name);
+      // Fall back to the set they currently run most, so every tracked
+      // character shows up (not just the ~8 with a curated guide).
+      const equipped = details[id]?.artifacts ?? [];
+      const setCounts = new Map<string, number>();
+      for (const artifact of equipped)
+        if (artifact.setName)
+          setCounts.set(
+            artifact.setName,
+            (setCounts.get(artifact.setName) ?? 0) + 1,
+          );
+      const dominantSet =
+        [...setCounts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+      const setName =
+        loadPlan(uid, id)?.set ??
+        compSets[id] ??
+        guide?.artifactSets.find((s) => s.recommended)?.name ??
+        guide?.artifactSets[0]?.name ??
+        consensusSets[id] ??
+        dominantSet;
+      if (!setName) continue;
+      const asset = findSet(buildAssets, setName);
+      const entry = bySet.get(setName) ?? {
+        name: setName,
+        icon: setIconUrl(asset?.icon),
+        domain: asset?.domain ?? null,
+        region: asset?.region ?? null,
+        characters: [],
+      };
+      entry.characters.push({
+        id: character.id,
+        name: character.name,
+        icon: character.icon,
+      });
+      bySet.set(setName, entry);
+    }
+    return [...bySet.values()];
+    // plansVersion re-reads saved plan sets after the modal closes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [
+    roster,
+    buildAssets,
+    priorityIds,
+    details,
+    consensusSets,
+    compSets,
+    uid,
+    plansVersion,
+  ]);
 
   // buildFarmingPlan already filters domains to the selected day.
   const todaysDomains = plan?.domains ?? [];
@@ -340,18 +595,34 @@ export function OverviewDashboard({
             Farming plan for {priorityIds.length} tracked character
             {priorityIds.length > 1 ? "s" : ""}. Priorities are set in My Roster.
           </p>
-          <button className="pill-button" onClick={onManagePriority}>
-            ✎ Edit priority
-          </button>
+          {activeComp && compMemberIds.size > 0 && (
+            <p className="comp-legend">
+              <span className="comp-dot" /> Highlighted materials are for your{" "}
+              <b>{activeComp.label}</b> team.
+            </p>
+          )}
+          <div className="dash-actions">
+            <button className="pill-button" onClick={onManagePriority}>
+              ✎ Edit priority
+            </button>
+            <button className="pill-button" onClick={onManageInventory}>
+              {inventory && Object.keys(inventory).length > 0
+                ? `✎ Inventory · ${Object.keys(inventory).length} items`
+                : "✎ Set inventory"}
+            </button>
+          </div>
         </div>
-        <div className="mora-total">
-          <span className="eyebrow">TOTAL MORA NEEDED</span>
-          <strong>
-            {moraIcon && (
-              <Image src={moraIcon} alt="Mora" width={22} height={22} />
-            )}
-            {plan ? plan.totalMora.toLocaleString() : "—"}
-          </strong>
+        <div className="dash-stats">
+          {resin && <ResinWidget note={resin.note} fetchedAt={resin.fetchedAt} />}
+          <div className="mora-total">
+            <span className="eyebrow">TOTAL MORA NEEDED</span>
+            <strong>
+              {moraIcon && (
+                <Image src={moraIcon} alt="Mora" width={22} height={22} />
+              )}
+              {plan ? plan.totalMora.toLocaleString() : "—"}
+            </strong>
+          </div>
         </div>
       </header>
 
@@ -414,7 +685,14 @@ export function OverviewDashboard({
                     <small>{domain.series.map((s) => s.name).join(" · ")}</small>
                   </div>
                   {domain.series.map((series) => (
-                    <div className="series-row" key={series.name}>
+                    <div
+                      className={`series-row${
+                        series.contributors.some((c) => isCompName(c.name))
+                          ? " comp-row"
+                          : ""
+                      }`}
+                      key={series.name}
+                    >
                       <span className="series-name">{series.name}</span>
                       <span className="series-tiles">
                         {series.items.map((item) => (
@@ -440,9 +718,13 @@ export function OverviewDashboard({
                       <span className="contributors">
                         {series.contributors.map((contributor) => (
                           <span
-                            className="contributor-avatar"
+                            className={`contributor-avatar${
+                              isCompName(contributor.name) ? " comp-member" : ""
+                            }`}
                             key={contributor.name}
-                            title={`${contributor.name} · ${formatCount(contributor.count)} books`}
+                            title={`${contributor.name} · ${formatCount(contributor.count)} books${
+                              isCompName(contributor.name) ? " · in your team" : ""
+                            }`}
                           >
                             {contributor.icon ? (
                               <Image
@@ -481,7 +763,14 @@ export function OverviewDashboard({
         ) : (
           <div className="boss-grid">
             {plan?.weeklyBosses.map((boss) => (
-              <div className="boss-card" key={boss.boss}>
+              <div
+                className={`boss-card${
+                  boss.contributors.some((c) => isCompName(c.name))
+                    ? " comp-card"
+                    : ""
+                }`}
+                key={boss.boss}
+              >
                 <div className="boss-portrait">
                   {boss.bossIcon ? (
                     <Image
@@ -516,9 +805,13 @@ export function OverviewDashboard({
                     <span className="contributors">
                       {boss.contributors.map((contributor) => (
                         <span
-                          className="contributor-avatar"
+                          className={`contributor-avatar${
+                            isCompName(contributor.name) ? " comp-member" : ""
+                          }`}
                           key={contributor.name}
-                          title={`${contributor.name} · ${formatCount(contributor.count)}`}
+                          title={`${contributor.name} · ${formatCount(contributor.count)}${
+                            isCompName(contributor.name) ? " · in your team" : ""
+                          }`}
                         >
                           {contributor.icon ? (
                             <Image
@@ -540,6 +833,70 @@ export function OverviewDashboard({
           </div>
         )}
       </section>
+
+      {/* Artifacts to Farm */}
+      {artifactPlan.length > 0 && (
+        <section className="dash-section">
+          <div className="dash-section-head">
+            <h3>
+              Artifacts to Farm{" "}
+              <span className="count-badge">{artifactPlan.length}</span>
+            </h3>
+          </div>
+          <div className="arti-grid">
+            {artifactPlan.map((set) => (
+              <div
+                className={`arti-card${
+                  set.characters.some((c) => compMemberIds.has(c.id))
+                    ? " comp-card"
+                    : ""
+                }`}
+                key={set.name}
+              >
+                <span className="mat-tile arti-icon" title={set.name}>
+                  {set.icon ? (
+                    <Image src={set.icon} alt={set.name} width={40} height={40} />
+                  ) : (
+                    <span className="mat-fallback">{set.name.slice(0, 2)}</span>
+                  )}
+                </span>
+                <div className="arti-copy">
+                  <b>{set.name}</b>
+                  <small>
+                    {set.domain
+                      ? `${set.domain}${set.region ? ` · ${set.region}` : ""} · 20 resin/run`
+                      : "From a boss or craftable — no domain"}
+                  </small>
+                </div>
+                <span className="contributors">
+                  {set.characters.map((character) => (
+                    <span
+                      className={`contributor-avatar${
+                        compMemberIds.has(character.id) ? " comp-member" : ""
+                      }`}
+                      key={character.id}
+                      title={`${character.name}${
+                        compMemberIds.has(character.id) ? " · in your team" : ""
+                      }`}
+                    >
+                      {character.icon ? (
+                        <Image
+                          src={character.icon}
+                          alt={character.name}
+                          width={26}
+                          height={26}
+                        />
+                      ) : (
+                        character.name.slice(0, 1)
+                      )}
+                    </span>
+                  ))}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* By Character */}
       <section className="dash-section">
@@ -579,6 +936,7 @@ export function OverviewDashboard({
             <CharacterPlanCard
               key={character.id}
               character={character}
+              inComp={compMemberIds.has(character.id)}
               onOpen={() => onOpen(character.id)}
             />
           ))}
@@ -600,14 +958,16 @@ export function OverviewDashboard({
 function CharacterPlanCard({
   character,
   onOpen,
+  inComp = false,
 }: {
   character: CharacterPlan;
   onOpen: () => void;
+  inComp?: boolean;
 }) {
   const done = character.remaining.length === 0;
   return (
     <div
-      className="char-plan-card"
+      className={`char-plan-card${inComp ? " comp-card" : ""}`}
       role="button"
       tabIndex={0}
       onClick={onOpen}

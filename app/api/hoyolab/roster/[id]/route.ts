@@ -3,6 +3,7 @@ import {
   fetchCharacterDetails,
   type CharacterDetail,
 } from "@/lib/hoyolab-game-record";
+import { getEnkaProfile, EnkaError } from "@/lib/enka";
 import {
   getSessionFromRequest,
   recordErrorResponse,
@@ -29,7 +30,29 @@ export async function GET(
     return NextResponse.json({ error: "Invalid character id." }, { status: 400 });
   }
 
+  const refresh = request.nextUrl.searchParams.get("refresh") === "1";
+
+  if (session.mode === "enka") {
+    try {
+      const profile = await getEnkaProfile(session.uid, refresh);
+      const detail = profile.details[characterId];
+      if (!detail) {
+        return NextResponse.json(
+          { error: "This character isn't in your in-game Showcase." },
+          { status: 404 },
+        );
+      }
+      return NextResponse.json({ character: detail, source: "enka" });
+    } catch (error) {
+      return NextResponse.json(
+        { error: error instanceof EnkaError ? error.message : "Enka fetch failed" },
+        { status: 502 },
+      );
+    }
+  }
+
   const cacheKey = `${session.uid}:${characterId}`;
+  if (refresh) cache.delete(cacheKey);
   const cached = cache.get(cacheKey);
   if (cached && cached.expires > Date.now()) {
     return NextResponse.json({ character: cached.detail, cached: true });

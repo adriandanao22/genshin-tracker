@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { fetchGenshinRole } from "@/lib/hoyolab-auth";
 import { decryptSession, sessionCookieName } from "@/lib/hoyolab-session";
+import { getEnkaProfile } from "@/lib/enka";
 
 function clearSession(body: Record<string, unknown>) {
   const response = NextResponse.json(body);
@@ -16,6 +17,31 @@ export async function GET(request: NextRequest) {
   const cookie = request.cookies.get(sessionCookieName)?.value;
   const session = cookie ? decryptSession(cookie) : null;
   if (!session) return NextResponse.json({ player: null });
+
+  if (session.mode === "enka") {
+    try {
+      const profile = await getEnkaProfile(session.uid);
+      return NextResponse.json({
+        player: {
+          name: profile.player.name,
+          uid: profile.player.uid,
+          server: profile.player.server,
+          level: profile.player.level,
+          updated: "just now",
+        },
+      });
+    } catch {
+      return NextResponse.json({
+        player: {
+          name: null,
+          uid: session.uid,
+          server: session.server,
+          level: null,
+          updated: "earlier",
+        },
+      });
+    }
+  }
 
   try {
     const roles = await fetchGenshinRole(session.ltuid, session.ltoken);

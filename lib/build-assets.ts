@@ -17,6 +17,9 @@ export type SetAsset = {
   name: string;
   rarity: number | null;
   icon: string | null;
+  /** Domain of Blessing that drops this set (null for boss/craftable sets). */
+  domain: string | null;
+  region: string | null;
 };
 
 export type BuildAssets = {

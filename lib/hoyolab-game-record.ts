@@ -81,6 +81,62 @@ async function requestRecord<T>(
   return data.data;
 }
 
+/* ---------- Real-time notes (resin) ---------- */
+
+type RawDailyNote = {
+  current_resin: number;
+  max_resin: number;
+  resin_recovery_time: string; // seconds until full, as a string
+};
+
+export type DailyNote = {
+  currentResin: number;
+  maxResin: number;
+  /** Seconds until resin is full (0 when already full). */
+  resinRecoveryTime: number;
+};
+
+/** Live resin from HoYoLAB's dailyNote endpoint (GET + DS-signed). */
+export async function fetchDailyNote(
+  session: HoyoLabSession,
+): Promise<DailyNote> {
+  const region = regionByServer[session.server];
+  if (!region)
+    throw new GameRecordError(`Unknown server "${session.server}"`, -1);
+
+  const response = await fetch(
+    `${RECORD_API}/dailyNote?server=${region}&role_id=${session.uid}`,
+    {
+      method: "GET",
+      headers: {
+        Cookie: `ltuid_v2=${session.ltuid}; ltoken_v2=${session.ltoken}`,
+        DS: generateDs(),
+        "x-rpc-app_version": "1.5.0",
+        "x-rpc-client_type": "5",
+        "x-rpc-language": "en-us",
+        "User-Agent": "Mozilla/5.0 OrbitalAtlas/0.1",
+      },
+      cache: "no-store",
+    },
+  );
+  const data = (await response.json()) as {
+    retcode?: number;
+    message?: string;
+    data?: RawDailyNote | null;
+  };
+  if (data.retcode !== 0 || !data.data) {
+    throw new GameRecordError(
+      data.message ?? "Unknown HoYoLAB error",
+      data.retcode ?? -1,
+    );
+  }
+  return {
+    currentResin: data.data.current_resin,
+    maxResin: data.data.max_resin,
+    resinRecoveryTime: Number(data.data.resin_recovery_time) || 0,
+  };
+}
+
 /* ---------- Raw API shapes (only the fields we consume) ---------- */
 
 type RawProperty = { property_type: number; base?: string; final?: string };

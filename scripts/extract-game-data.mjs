@@ -92,6 +92,8 @@ function enemyIcon(name) {
 const names = db.characters("names", { matchCategories: true });
 const characters = {};
 const guides = {};
+// Numeric avatar id -> character basics, for mapping Enka.network profiles.
+const characterIdToName = {};
 const materialCache = new Map();
 const skipped = [];
 
@@ -169,6 +171,13 @@ for (const name of names) {
   }
 
   const key = normalize(character.name);
+  if (character.id)
+    characterIdToName[character.id] = {
+      name: character.name,
+      element: character.elementText ?? null,
+      rarity: character.rarity ?? null,
+      icon: character.images?.filename_icon ?? null,
+    };
   characters[key] = {
     name: character.name,
     rarity: character.rarity,
@@ -252,6 +261,29 @@ try {
   console.log("weapon extraction failed:", error?.message);
 }
 
+// Map each artifact set to the Domain of Blessing that drops it (for "artifacts
+// to farm"). Domains carry domainText="Artifacts" and list sets in rewardPreview.
+const setDomain = {};
+try {
+  for (const dn of db.domains("names", { matchCategories: true })) {
+    const d = db.domain(dn);
+    if (d?.domainText !== "Artifacts") continue;
+    const base = d.name
+      .replace(/^Domain of Blessing:\s*/, "")
+      .replace(/\s+(I|II|III|IV|V)$/, "")
+      .trim();
+    for (const rw of d.rewardPreview ?? []) {
+      // Artifact set item ids live in the 4xxxxx range.
+      if (rw?.id >= 400000 && rw.id < 500000 && rw.name) {
+        const key = normalize(rw.name);
+        if (!setDomain[key]) setDomain[key] = { domain: base, region: d.regionName ?? null };
+      }
+    }
+  }
+} catch (error) {
+  console.log("artifact-domain mapping failed:", error?.message);
+}
+
 // All artifact sets: representative icon (flower) + top rarity — for the set planner.
 const sets = {};
 try {
@@ -260,10 +292,13 @@ try {
     const a = db.artifact(name);
     if (!a) continue;
     const rarities = a.rarityList ?? [];
+    const dom = setDomain[normalize(a.name)];
     sets[normalize(a.name)] = {
       name: a.name,
       rarity: rarities.length ? Math.max(...rarities) : null,
       icon: a.images?.filename_flower ?? null,
+      domain: dom?.domain ?? null,
+      region: dom?.region ?? null,
     };
   }
 } catch (error) {
@@ -315,6 +350,7 @@ writeFileSync(
     extractedAt: new Date().toISOString(),
     weapons,
     sets,
+    characterIdToName,
   }),
 );
 console.log(

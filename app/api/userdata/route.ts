@@ -3,6 +3,7 @@ import { decryptSession, sessionCookieName } from "@/lib/hoyolab-session";
 import { getUserData, saveUserData, syncEnabled } from "@/lib/user-store";
 import type { BuildPlan } from "@/lib/plans";
 import type { ActiveComp } from "@/lib/active-comp";
+import type { Inventory } from "@/lib/inventory";
 
 /**
  * Durable sync for build plans + priority. The UID is taken ONLY from the
@@ -36,6 +37,7 @@ export async function PUT(request: NextRequest) {
     priority?: number[];
     plans?: Record<string, BuildPlan>;
     activeComp?: ActiveComp | null;
+    inventory?: Inventory | null;
   };
   try {
     body = await request.json();
@@ -47,11 +49,13 @@ export async function PUT(request: NextRequest) {
     priority?: number[];
     plans?: Record<string, BuildPlan>;
     activeComp?: ActiveComp | null;
+    inventory?: Inventory | null;
   } = {};
   if (Array.isArray(body.priority))
     partial.priority = body.priority.filter((id) => typeof id === "number");
   if (body.plans && typeof body.plans === "object") partial.plans = body.plans;
   if ("activeComp" in body) partial.activeComp = body.activeComp ?? null;
+  if ("inventory" in body) partial.inventory = body.inventory ?? null;
 
   try {
     await saveUserData(uid, partial);

@@ -21,6 +21,8 @@ export type HoyoLabSession = {
   server: string;
   ltuid: string;
   ltoken: string;
+  /** "enka" = connected by UID via Enka.network (no credentials). */
+  mode?: "hoyolab" | "enka";
 };
 
 export function encryptSession(session: HoyoLabSession) {
@@ -54,7 +56,9 @@ export function decryptSession(value: string): HoyoLabSession | null {
     ]);
     const session = JSON.parse(decrypted.toString("utf8")) as HoyoLabSession;
 
-    if (!session.uid || !session.server || !session.ltuid || !session.ltoken)
+    if (!session.uid || !session.server) return null;
+    // Enka (UID-only) sessions carry no credentials; HoYoLAB ones must.
+    if (session.mode !== "enka" && (!session.ltuid || !session.ltoken))
       return null;
     return session;
   } catch {

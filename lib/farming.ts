@@ -189,6 +189,7 @@ export function remainingMaterials(
   currentLevel: number,
   currentTalents: { normal: number; skill: number; burst: number },
   targets: PlanTargets,
+  owned?: Record<string, number>,
 ): RemainingItem[] {
   const totals = new Map<string, number>();
   const add = (item: CostItem) =>
@@ -214,10 +215,12 @@ export function remainingMaterials(
   return [...totals.entries()]
     .map(([name, count]) => ({
       name,
-      count,
+      // Subtract what the player already owns (imported inventory), if any.
+      count: owned ? Math.max(0, count - (owned[normalize(name)] ?? 0)) : count,
       kind: materials[name]?.kind ?? (name === "Mora" ? "mora" : "other"),
       icon: materials[name]?.icon ?? null,
     }))
+    .filter((item) => item.count > 0)
     .sort(
       (a, b) => KIND_ORDER.indexOf(a.kind) - KIND_ORDER.indexOf(b.kind),
     );
@@ -293,6 +296,7 @@ export function buildFarmingPlan(
   materials: Record<string, MaterialMeta>,
   day: string,
   today: string = day,
+  owned?: Record<string, number>,
 ): FarmingPlan {
   const characters: CharacterPlan[] = entries.map((entry) => ({
     ...entry,
@@ -302,6 +306,7 @@ export function buildFarmingPlan(
       entry.currentLevel,
       entry.currentTalents,
       entry.targets,
+      owned,
     ),
     formableToday: entry.farming.bookDays?.includes(today) ?? false,
   }));

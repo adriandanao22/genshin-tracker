@@ -3,6 +3,7 @@ import { getSupabase } from "@/lib/supabase-server";
 import { uidHash } from "@/lib/uid-hash";
 import type { BuildPlan } from "@/lib/plans";
 import type { ActiveComp } from "@/lib/active-comp";
+import type { Inventory } from "@/lib/inventory";
 
 /**
  * Durable, non-sensitive user data: build plans + priority character ids.
@@ -16,9 +17,15 @@ export type UserData = {
   priority: number[];
   plans: Record<string, BuildPlan>;
   activeComp: ActiveComp | null;
+  inventory: Inventory | null;
 };
 
-const EMPTY: UserData = { priority: [], plans: {}, activeComp: null };
+const EMPTY: UserData = {
+  priority: [],
+  plans: {},
+  activeComp: null,
+  inventory: null,
+};
 
 /** Whether server-side sync is available (Supabase configured). */
 export function syncEnabled(): boolean {
@@ -40,6 +47,7 @@ export async function getUserData(uid: string): Promise<UserData | null> {
     priority: Array.isArray(data.priority) ? data.priority : [],
     plans: (data.plans as Record<string, BuildPlan>) ?? {},
     activeComp: (data.active_comp as ActiveComp | null) ?? null,
+    inventory: (data.inventory as Inventory | null) ?? null,
   };
 }
 
@@ -57,6 +65,7 @@ export async function saveUserData(
   if (partial.priority !== undefined) row.priority = partial.priority;
   if (partial.plans !== undefined) row.plans = partial.plans;
   if (partial.activeComp !== undefined) row.active_comp = partial.activeComp;
+  if (partial.inventory !== undefined) row.inventory = partial.inventory;
   const { error } = await supabase
     .from(TABLE)
     .upsert(row, { onConflict: "uid_hash" });

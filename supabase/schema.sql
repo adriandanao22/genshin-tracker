@@ -11,11 +11,13 @@ create table if not exists public.user_data (
   priority    jsonb not null default '[]'::jsonb,
   plans       jsonb not null default '{}'::jsonb,
   active_comp jsonb,
+  inventory   jsonb,
   updated_at  timestamptz not null default now()
 );
 
--- If the table already existed before active_comp was added, run:
+-- If the table already existed, add newer columns:
 --   alter table public.user_data add column if not exists active_comp jsonb;
+--   alter table public.user_data add column if not exists inventory   jsonb;
 
 -- Defence in depth: enable RLS with NO policies. The browser never talks to
 -- Supabase directly; our API routes use the service_role key (which bypasses

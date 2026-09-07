@@ -14,11 +14,13 @@ import {
   saveActiveComp,
   type ActiveComp,
 } from "@/lib/active-comp";
+import { loadInventory, saveInventory, type Inventory } from "@/lib/inventory";
 
 type Payload = {
   priority?: number[];
   plans?: Record<string, BuildPlan>;
   activeComp?: ActiveComp | null;
+  inventory?: Inventory | null;
 };
 
 /** Fire-and-forget push; the UID is derived server-side from the cookie. */
@@ -46,6 +48,10 @@ export function syncActiveComp(comp: ActiveComp | null): void {
   pushUserData({ activeComp: comp });
 }
 
+export function syncInventory(inventory: Inventory | null): void {
+  pushUserData({ inventory });
+}
+
 /**
  * On connect: pull the server copy into localStorage. If the server has data
  * it wins (cross-device); if it's empty, push any existing local data up so a
@@ -64,28 +70,34 @@ export async function hydrateUserData(uid: string): Promise<void> {
   const serverPriority = server.priority ?? [];
   const serverPlans = server.plans ?? {};
   const serverActiveComp = server.activeComp ?? null;
+  const serverInventory = server.inventory ?? null;
   const serverHasData =
     serverPriority.length > 0 ||
     Object.keys(serverPlans).length > 0 ||
-    serverActiveComp !== null;
+    serverActiveComp !== null ||
+    serverInventory !== null;
 
   if (serverHasData) {
     savePriority(uid, serverPriority);
     replaceAllPlans(uid, serverPlans);
     saveActiveComp(uid, serverActiveComp);
+    saveInventory(uid, serverInventory);
   } else {
     const localPriority = loadPriority(uid);
     const localPlans = loadPlans(uid);
     const localActiveComp = loadActiveComp(uid);
+    const localInventory = loadInventory(uid);
     if (
       localPriority.length > 0 ||
       Object.keys(localPlans).length > 0 ||
-      localActiveComp
+      localActiveComp ||
+      localInventory
     )
       pushUserData({
         priority: localPriority,
         plans: localPlans,
         activeComp: localActiveComp,
+        inventory: localInventory,
       });
   }
 }
