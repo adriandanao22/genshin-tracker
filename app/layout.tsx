@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { Fredoka, Quicksand } from "next/font/google";
+import { Bricolage_Grotesque, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { StarfieldBackdrop } from "./components/starfield";
 
-const fredoka = Fredoka({
+// Headings: Bricolage Grotesque (characterful display grotesque).
+const fredoka = Bricolage_Grotesque({
   variable: "--font-fredoka",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
 });
 
-const quicksand = Quicksand({
+// Body: Inter (clean, legible workhorse).
+const quicksand = Inter({
   variable: "--font-quicksand",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+});
+
+// Data / HUD numerals: JetBrains Mono (Observatory-console feel).
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${fredoka.variable} ${quicksand.variable} h-full antialiased`}
+      className={`${fredoka.variable} ${quicksand.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <StarfieldBackdrop />

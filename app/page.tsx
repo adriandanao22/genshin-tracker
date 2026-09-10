@@ -431,58 +431,28 @@ export default function Home() {
 
   return (
     <main className="app-shell">
-      <aside className="sidebar">
-        <div className="brand">
-          <span className="brand-mark">✦</span>
-          <span>
-            ORBITAL
-            <br />
-            <b>ATLAS</b>
-          </span>
-        </div>
-        <div className="workspace-label">PLAYER WORKSPACE</div>
-        <nav className="nav-list" aria-label="Main navigation">
-          {["Overview", "My roster", "Build guides", "Teams", "Inventory"].map(
-            (tab) => (
-              <button
-                className={`nav-item ${activeTab === tab ? "is-active" : ""}`}
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-              >
-                <span className="nav-dot" />
-                {tab}
-              </button>
-            ),
-          )}
-        </nav>
-        <div className="sidebar-note">
-          <span className="eyebrow">NEXT SYNC</span>
-          <strong>HoYoLAB connection</strong>
-          <p>
-            {connected
-              ? `Signed in as ${player.name} · UID ${player.uid}.`
-              : "Sign in with HoYoLAB to make every recommendation personal."}
-          </p>
-          <button
-            className="link-button"
-            onClick={() => setConnectionOpen(true)}
-          >
-            Manage connection <span>↗</span>
-          </button>
-        </div>
-        <div className="sidebar-footer">
-          <span className="status-dot" />
-          {connected ? "HoYoLAB linked" : "Local preview mode"}{" "}
-          <span>v0.1</span>
-        </div>
-      </aside>
-      <section className="main-content">
-        <header className="topbar">
-          <div>
-            <span className="eyebrow">{activeTab.toUpperCase()}</span>
-            <h1>Good evening, {player.name}</h1>
+      <header className="topnav">
+        <div className="topnav-inner">
+          <div className="brand">
+            <span className="brand-mark">✦</span>
+            <span className="brand-word">
+              ORBITAL <b>ATLAS</b>
+            </span>
           </div>
-          <div className="topbar-actions">
+          <nav className="nav-list" aria-label="Main navigation">
+            {["Overview", "My roster", "Build guides", "Teams", "Inventory"].map(
+              (tab) => (
+                <button
+                  className={`nav-item ${activeTab === tab ? "is-active" : ""}`}
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </button>
+              ),
+            )}
+          </nav>
+          <div className="topnav-actions">
             {connected && (
               <button
                 className="link-button refresh-button"
@@ -491,7 +461,9 @@ export default function Home() {
                 title="Fetch the latest build data now, bypassing the cache"
               >
                 <span className={refreshing ? "spin" : ""}>↻</span>{" "}
-                {refreshing ? "Refreshing…" : "Refresh"}
+                <span className="refresh-label">
+                  {refreshing ? "Refreshing…" : "Refresh"}
+                </span>
               </button>
             )}
             <span className="sync-status">
@@ -506,6 +478,13 @@ export default function Home() {
               {avatarInitials}
             </button>
           </div>
+        </div>
+      </header>
+      <section className="main-content">
+        <div className="content-col">
+        <header className="page-head">
+          <span className="eyebrow">{activeTab.toUpperCase()}</span>
+          <h1>Good evening, {player.name}</h1>
         </header>
         {activeTab === "My roster" && (
           <div className="roster-tab">
@@ -568,6 +547,7 @@ export default function Home() {
             onConnect={() => setConnectionOpen(true)}
           />
         )}
+        </div>
       </section>
       {connectionOpen && (
         <div

@@ -1,51 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  /* Palette modeled on genshintrack.com: dark zinc, lavender accents, gold trim */
-  --bg-body: #09090b;
-  --bg-surface: #18181b;
-  --bg-inset: #101014;
-  --sidebar-bg: #0d0e18;
-  --sidebar-border: rgba(211, 188, 142, 0.16);
-  --gold-trim: #d3bc8e;
-  --gold-trim-bright: #ecdcb8;
-  --accent-soft: #6a6ea6;
-  --accent-mid: #7c80b8;
-  --accent-main: #9a9fd0;
-  --accent-bright: #b9bce0;
-  --accent-light: #cdd0ec;
-  --accent-pop: #e2e3f2;
-  --accent-pale: #2a2a3a;
-  --accent-ghost: #1a1a24;
-  --text-primary: #fafafa;
-  --text-secondary: #e4e4e7;
-  --text-soft: #d4d4d8;
-  --text-muted: #a1a1aa;
-  --border-color: rgba(161, 161, 170, 0.14);
-  --border-mid: rgba(161, 161, 170, 0.24);
-  --success: #34d399;
-  --danger: #f8867c;
-  --card-hover-bg: #212124;
-  --shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.55);
-  --gradient-main: linear-gradient(135deg, #6a6ea6, #7c80b8);
-  --gradient-hero: linear-gradient(135deg, #6a6ea6, #7c80b8, #9a9fd0);
-  --gradient-pop: linear-gradient(135deg, #e2e3f2, #cdd0ec);
+  /* Solar Amber — warm charcoal base, amber primary, sky-blue contrast pop.
+     Deliberately distinct from the earlier lavender/gold-on-zinc look.
+     Token names are kept; --accent-* is the amber ramp, --gold-trim* is the
+     sky-blue "special highlight" role (comp materials, crowns). */
+  --bg-body: #131110;
+  --bg-surface: #211c17;
+  --bg-inset: #191410;
+  --sidebar-bg: #17120c;
+  --sidebar-border: rgba(245, 158, 11, 0.18);
+  --gold-trim: #5ca8f5;
+  --gold-trim-bright: #93c5fd;
+  --accent-soft: #b45309;
+  --accent-mid: #d97706;
+  --accent-main: #f59e0b;
+  --accent-bright: #fbbf24;
+  --accent-light: #fcd34d;
+  --accent-pop: #fde9b0;
+  --accent-pale: #2c2117;
+  --accent-ghost: #1d1710;
+  --text-primary: #f8f3ea;
+  --text-secondary: #ece4d7;
+  --text-soft: #d7cdbd;
+  --text-muted: #a99b86;
+  --border-color: rgba(233, 221, 200, 0.12);
+  --border-mid: rgba(233, 221, 200, 0.22);
+  --success: #4ade80;
+  --danger: #f87171;
+  --card-hover-bg: #2a231b;
+  --shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.6);
+  --gradient-main: linear-gradient(135deg, #d97706, #f59e0b);
+  --gradient-hero: linear-gradient(135deg, #b45309, #f59e0b, #fbbf24);
+  --gradient-pop: linear-gradient(135deg, #fde9b0, #fcd34d);
 
   --background: var(--bg-body);
   --foreground: var(--text-primary);
 }
 
+/* Tailwind theme wired to our design tokens. `inline` means utilities resolve
+   to the CSS vars at runtime, so re-theming (change the :root tokens) still
+   cascades through both hand-written CSS and Tailwind utilities. Use these in
+   new markup, e.g. `bg-surface text-ink border-line`, `text-accent`, `bg-pop`. */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-quicksand);
+  --font-heading: var(--font-fredoka);
+
+  /* Surfaces */
+  --color-body: var(--bg-body);
+  --color-surface: var(--bg-surface);
+  --color-inset: var(--bg-inset);
+  --color-hover: var(--card-hover-bg);
+
+  /* Accent ramp (amber, primary) */
+  --color-accent: var(--accent-main);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-mid: var(--accent-mid);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-light: var(--accent-light);
+  --color-accent-pop: var(--accent-pop);
+
+  /* Contrast pop (sky) */
+  --color-pop: var(--gold-trim);
+  --color-pop-bright: var(--gold-trim-bright);
+
+  /* Text */
+  --color-ink: var(--text-primary);
+  --color-ink-soft: var(--text-soft);
+  --color-ink-muted: var(--text-muted);
+
+  /* Lines + status */
+  --color-line: var(--border-color);
+  --color-line-mid: var(--border-mid);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
 }
 
 body {
   background: var(--bg-body);
   color: var(--text-secondary);
-  font-family: var(--font-quicksand), Quicksand, sans-serif;
+  font-family: var(--font-quicksand), Inter, sans-serif;
 }
 
 * {
@@ -57,7 +94,7 @@ button {
 h1,
 h2,
 h3 {
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   color: var(--text-primary);
 }
 
@@ -69,19 +106,30 @@ h3 {
   pointer-events: none;
   overflow: hidden;
   background:
+    /* faint HUD grid */
+    repeating-linear-gradient(
+      to right,
+      rgba(233, 221, 200, 0.025) 0 1px,
+      transparent 1px 64px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(233, 221, 200, 0.025) 0 1px,
+      transparent 1px 64px
+    ),
     radial-gradient(
       120% 80% at 50% -5%,
-      rgba(99, 102, 241, 0.15),
+      rgba(245, 158, 11, 0.16),
       transparent 60%
     ),
     radial-gradient(
       85% 70% at 88% 106%,
-      rgba(45, 212, 191, 0.08),
+      rgba(249, 115, 22, 0.1),
       transparent 55%
     ),
     radial-gradient(
       80% 65% at 10% 112%,
-      rgba(45, 212, 191, 0.08),
+      rgba(96, 165, 250, 0.07),
       transparent 55%
     ),
     var(--bg-body);
@@ -93,7 +141,7 @@ h3 {
 }
 .starfield .spark {
   position: absolute;
-  background: #c7d2fe;
+  background: #fcd34d;
   clip-path: polygon(
     50% 0%,
     61% 39%,
@@ -123,50 +171,69 @@ h3 {
   }
 }
 
-/* ---------- Shell & sidebar ---------- */
+/* ---------- Shell & top navigation ---------- */
 .app-shell {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: transparent;
 }
-.sidebar {
-  width: 250px;
-  flex: 0 0 250px;
-  background: rgba(13, 14, 24, 0.82);
-  border-right: 1px solid var(--sidebar-border);
-  backdrop-filter: blur(10px);
-  padding: 34px 22px 24px;
-  display: flex;
-  flex-direction: column;
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg-body) 82%, transparent);
+  border-bottom: 1px solid var(--sidebar-border);
+  backdrop-filter: blur(12px);
 }
-.brand {
+.topnav-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 12px 28px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  gap: 22px;
+}
+.topnav-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.2em;
-  line-height: 1.45;
+  color: var(--text-muted);
+}
+.brand {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   color: var(--text-soft);
+}
+.brand-word {
+  white-space: nowrap;
 }
 .brand b {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.27em;
-  color: var(--gold-trim-bright);
+  color: var(--accent-light);
 }
 .brand-mark {
   width: 30px;
   height: 30px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(211, 188, 142, 0.45);
+  border: 1px solid rgba(245, 158, 11, 0.45);
   color: var(--gold-trim);
   font-size: 16px;
   border-radius: 50%;
-  background: rgba(211, 188, 142, 0.08);
-  box-shadow: 0 0 14px rgba(211, 188, 142, 0.18);
+  background: rgba(245, 158, 11, 0.08);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.18);
 }
 .workspace-label,
 .eyebrow {
@@ -180,33 +247,38 @@ h3 {
   margin: 65px 12px 16px;
 }
 .nav-list {
-  display: grid;
-  gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-list::-webkit-scrollbar {
+  display: none;
 }
 .nav-item {
   border: 0;
   background: transparent;
   color: var(--text-muted);
-  text-align: left;
-  padding: 11px 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  padding: 8px 15px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  border-radius: 11px;
+  border-radius: 999px;
+  white-space: nowrap;
   transition:
     background 0.15s ease,
     color 0.15s ease;
 }
-.nav-item:hover,
-.nav-item.is-active {
+.nav-item:hover {
   color: var(--text-primary);
   background: var(--accent-ghost);
 }
 .nav-item.is-active {
-  box-shadow: 0 0 12px rgba(154, 159, 208, 0.18);
+  color: var(--accent-light);
+  background: color-mix(in srgb, var(--accent-main) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent-main) 32%, transparent);
 }
 .nav-dot {
   width: 5px;
@@ -357,7 +429,7 @@ h3 {
 .connection-form input:focus,
 .connection-form select:focus {
   border-color: var(--accent-main);
-  box-shadow: 0 0 0 3px rgba(154, 159, 208, 0.16);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
 }
 .form-error {
   grid-column: 1 / -1;
@@ -487,7 +559,7 @@ h3 {
   place-items: center;
   font-size: 22px;
   font-weight: 900;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
 }
 .grade-body {
   display: grid;
@@ -674,13 +746,26 @@ h3 {
   color: var(--accent-light);
 }
 
-/* ---------- Main content ---------- */
+/* ---------- Main content (centered column) ---------- */
 .main-content {
-  max-width: 1440px;
+  width: 100%;
+}
+.content-col {
+  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
-  padding: 37px 56px 64px;
+  padding: 34px 28px 64px;
 }
+.page-head {
+  margin-bottom: 30px;
+}
+.page-head h1 {
+  font-size: 27px;
+  font-weight: 600;
+  margin: 6px 0 0;
+  letter-spacing: -0.01em;
+}
+/* Legacy per-page topbar (kept for any residual usage) */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -712,8 +797,8 @@ h3 {
   color: var(--text-soft);
 }
 .avatar {
-  border: 1px solid rgba(211, 188, 142, 0.4);
-  background: rgba(211, 188, 142, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.12);
   color: var(--gold-trim-bright);
   width: 37px;
   height: 37px;
@@ -724,7 +809,7 @@ h3 {
   transition: box-shadow 0.15s ease;
 }
 .avatar:hover {
-  box-shadow: 0 0 16px rgba(211, 188, 142, 0.35);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
 }
 .content-grid {
   display: grid;
@@ -749,7 +834,7 @@ h3 {
 }
 .coral-text {
   color: var(--accent-light);
-  text-shadow: 0 0 18px rgba(154, 159, 208, 0.5);
+  text-shadow: 0 0 18px rgba(245, 158, 11, 0.5);
 }
 .welcome-panel h2 {
   font-size: clamp(29px, 3vw, 42px);
@@ -786,7 +871,7 @@ h3 {
     transform 0.15s ease;
 }
 .primary-button:hover {
-  box-shadow: 0 0 24px rgba(154, 159, 208, 0.35);
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
   transform: translateY(-1px);
 }
 .primary-button span {
@@ -808,12 +893,12 @@ h3 {
 }
 .orbit-one {
   inset: 18px 0;
-  border-color: rgba(154, 159, 208, 0.4);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 .orbit-two {
   inset: 0 32px;
   transform: rotate(60deg);
-  border-color: rgba(211, 188, 142, 0.32);
+  border-color: rgba(245, 158, 11, 0.32);
 }
 .orbit-core {
   position: absolute;
@@ -827,12 +912,12 @@ h3 {
     var(--accent-pale),
     var(--accent-ghost)
   );
-  border: 1px solid rgba(211, 188, 142, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.35);
   color: var(--gold-trim-bright);
   display: grid;
   place-items: center;
   font-size: 27px;
-  box-shadow: 0 0 28px rgba(154, 159, 208, 0.3);
+  box-shadow: 0 0 28px rgba(245, 158, 11, 0.3);
 }
 .orbit-label {
   position: absolute;
@@ -864,7 +949,7 @@ h3 {
 }
 .stat-card strong {
   display: block;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   font-size: 27px;
   font-weight: 600;
   margin: 7px 0 4px;
@@ -926,9 +1011,9 @@ h3 {
 }
 .character-card:hover,
 .character-card.selected {
-  border-color: rgba(154, 159, 208, 0.4);
+  border-color: rgba(245, 158, 11, 0.4);
   background: var(--card-hover-bg);
-  box-shadow: 0 0 14px rgba(154, 159, 208, 0.12);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.12);
 }
 .character-avatar {
   display: grid;
@@ -1042,7 +1127,7 @@ h3 {
 .filter-tabs button.active-filter {
   color: var(--accent-light);
   background: var(--accent-ghost);
-  box-shadow: 0 0 12px rgba(154, 159, 208, 0.25);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
 }
 .guide-list,
 .routine-list {
@@ -1126,7 +1211,7 @@ h3 {
 }
 .routine-item.done .check-box {
   background: var(--accent-pale);
-  border-color: rgba(154, 159, 208, 0.5);
+  border-color: rgba(245, 158, 11, 0.5);
 }
 .routine-item > span:nth-child(2) {
   display: grid;
@@ -1182,9 +1267,9 @@ h3 {
     box-shadow 0.15s ease;
 }
 .wall-card:hover {
-  border-color: rgba(154, 159, 208, 0.4);
+  border-color: rgba(245, 158, 11, 0.4);
   background: var(--card-hover-bg);
-  box-shadow: 0 0 14px rgba(154, 159, 208, 0.12);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.12);
 }
 .wall-card .character-avatar {
   flex-basis: 52px;
@@ -1216,10 +1301,10 @@ h3 {
   line-height: 1;
 }
 .stars.five {
-  color: var(--gold-trim);
+  color: #f5c250;
 }
 .stars.four {
-  color: var(--accent-main);
+  color: #b48bf0;
 }
 .guide-badge {
   position: absolute;
@@ -1228,7 +1313,7 @@ h3 {
   padding: 3px 8px;
   border-radius: 999px;
   background: var(--accent-ghost);
-  border: 1px solid rgba(154, 159, 208, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.35);
   color: var(--accent-light);
   font-size: 9px;
   font-weight: 700;
@@ -1254,7 +1339,7 @@ h3 {
 }
 .guide-card > b {
   font-size: 15px;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -1323,10 +1408,10 @@ h3 {
 }
 
 .stars.rarity-5 {
-  color: var(--gold-trim);
+  color: #f5c250;
 }
 .stars.rarity-4 {
-  color: var(--accent-main);
+  color: #b48bf0;
 }
 .stars.rarity-3 {
   color: var(--text-muted);
@@ -1473,7 +1558,7 @@ h3 {
   border-radius: 999px;
   background: var(--accent-ghost);
   color: var(--accent-light);
-  border: 1px solid rgba(154, 159, 208, 0.3);
+  border: 1px solid rgba(245, 158, 11, 0.3);
   letter-spacing: 0.04em;
 }
 
@@ -1511,7 +1596,7 @@ h3 {
   justify-items: start;
 }
 .guide-hero-info h2 {
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: var(--text-primary);
@@ -1999,7 +2084,7 @@ h3 {
 }
 .tp-member.is-focus .tp-avatar {
   border-color: var(--gold-trim);
-  box-shadow: 0 0 9px rgba(211, 188, 142, 0.4);
+  box-shadow: 0 0 9px rgba(245, 158, 11, 0.4);
 }
 .tp-tick,
 .tp-missing {
@@ -2104,7 +2189,7 @@ h3 {
   color: var(--success);
 }
 .check-row.warn .check-mark {
-  background: rgba(211, 188, 142, 0.16);
+  background: rgba(245, 158, 11, 0.16);
   color: var(--gold-trim-bright);
 }
 .check-row.fail .check-mark {
@@ -2168,10 +2253,10 @@ h3 {
   color: var(--text-soft);
 }
 .day-chip.day-active {
-  border-color: rgba(154, 159, 208, 0.6);
+  border-color: rgba(245, 158, 11, 0.6);
   background: var(--accent-ghost);
   color: var(--accent-light);
-  box-shadow: 0 0 12px rgba(154, 159, 208, 0.25);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
 }
 .farm-section {
   padding: 10px 0 4px;
@@ -2323,7 +2408,7 @@ h3 {
 }
 .plan-grid select:focus {
   border-color: var(--accent-main);
-  box-shadow: 0 0 0 3px rgba(154, 159, 208, 0.16);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
 }
 .plan-reset {
   margin-left: 8px;
@@ -2356,10 +2441,10 @@ h3 {
   color: var(--gold-trim-bright);
 }
 .material-chip.weekly {
-  border-color: rgba(211, 188, 142, 0.35);
+  border-color: rgba(245, 158, 11, 0.35);
 }
 .material-chip.book {
-  border-color: rgba(154, 159, 208, 0.4);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 
 /* ---------- Overview farming full width & roster tab ---------- */
@@ -2383,8 +2468,8 @@ h3 {
   outline-offset: 2px;
 }
 .wall-card.is-priority {
-  border-color: rgba(211, 188, 142, 0.45);
-  box-shadow: 0 0 14px rgba(211, 188, 142, 0.14);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.14);
 }
 .wall-meta {
   display: flex;
@@ -2410,12 +2495,12 @@ h3 {
     transform 0.15s ease;
 }
 .pin-button:hover {
-  color: var(--gold-trim-bright);
+  color: var(--accent-light);
   transform: scale(1.15);
 }
 .pin-button.pinned {
-  color: var(--gold-trim);
-  text-shadow: 0 0 10px rgba(211, 188, 142, 0.5);
+  color: var(--accent-bright);
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
 /* ---------- Modal: level & talent progress rows ---------- */
@@ -2459,7 +2544,7 @@ h3 {
 }
 .progress-select:focus {
   border-color: var(--accent-main);
-  box-shadow: 0 0 0 3px rgba(154, 159, 208, 0.16);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
 }
 
 /* ---------- Modal: inline goal selectors ---------- */
@@ -2491,7 +2576,7 @@ h3 {
 }
 .inline-goal select:focus {
   border-color: var(--accent-main);
-  box-shadow: 0 0 0 3px rgba(154, 159, 208, 0.16);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
 }
 .artifact-goals {
   margin-bottom: 12px;
@@ -2586,7 +2671,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   font-size: 26px;
   font-weight: 600;
   color: var(--gold-trim-bright);
@@ -2621,7 +2706,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   font-size: 26px;
   font-weight: 600;
   color: var(--accent-light);
@@ -2636,8 +2721,8 @@ h3 {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #cdd0ec, #7c80b8);
-  box-shadow: 0 0 8px rgba(154, 159, 208, 0.55);
+  background: radial-gradient(circle at 35% 30%, #fcd34d, #d97706);
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.55);
 }
 .resin-bar {
   width: 130px;
@@ -2650,7 +2735,7 @@ h3 {
   display: block;
   height: 100%;
   border-radius: 3px;
-  background: linear-gradient(90deg, #7c80b8, #cdd0ec);
+  background: linear-gradient(90deg, #d97706, #fcd34d);
 }
 .resin-widget small {
   font-size: 11px;
@@ -2717,7 +2802,7 @@ h3 {
   padding: 0 6px;
   border-radius: 999px;
   background: var(--accent-ghost);
-  border: 1px solid rgba(154, 159, 208, 0.35);
+  border: 1px solid rgba(245, 158, 11, 0.35);
   color: var(--accent-light);
   font-size: 11px;
   font-weight: 700;
@@ -2748,7 +2833,7 @@ h3 {
   padding: 10px 14px;
   overflow: hidden;
   background:
-    radial-gradient(120% 120% at 80% 0%, rgba(154, 159, 208, 0.35), transparent 60%),
+    radial-gradient(120% 120% at 80% 0%, rgba(245, 158, 11, 0.35), transparent 60%),
     linear-gradient(135deg, #2a2a3a, #16161c);
 }
 /* Real Teyvat map crop centered on the region (HoYoLab map tiles). */
@@ -2791,15 +2876,16 @@ h3 {
   top: 8px;
   right: 8px;
   z-index: 3;
-  width: 26px;
-  height: 26px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(9, 9, 11, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(9, 9, 11, 0.55);
   backdrop-filter: blur(4px);
-  color: var(--text-soft);
-  font-size: 13px;
-  line-height: 1;
+  color: #fff;
+  line-height: 0;
   cursor: pointer;
   transition:
     background 0.15s ease,
@@ -2971,16 +3057,16 @@ h3 {
   object-fit: contain;
 }
 .mat-tile.book {
-  border-color: rgba(154, 159, 208, 0.4);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 .mat-tile.weekly {
-  border-color: rgba(211, 188, 142, 0.4);
+  border-color: rgba(245, 158, 11, 0.4);
 }
 .mat-tile.weaponAscension {
   border-color: rgba(127, 184, 230, 0.4);
 }
 .mat-tile.mora {
-  border-color: rgba(211, 188, 142, 0.5);
+  border-color: rgba(245, 158, 11, 0.5);
 }
 .mat-fallback {
   font-size: 10px;
@@ -3374,7 +3460,7 @@ h3 {
   place-items: center;
   background: radial-gradient(
     circle at 50% 32%,
-    rgba(154, 159, 208, 0.2),
+    rgba(245, 158, 11, 0.2),
     rgba(9, 9, 11, 0.55)
   );
   border-right: 1px solid var(--border-color);
@@ -3417,8 +3503,8 @@ h3 {
 }
 .char-plan-card:hover,
 .char-plan-card:focus-visible {
-  border-color: rgba(154, 159, 208, 0.4);
-  box-shadow: 0 0 16px rgba(154, 159, 208, 0.14);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.14);
   outline: none;
 }
 .char-plan-head {
@@ -3511,9 +3597,13 @@ h3 {
   top: 14px;
   right: 16px;
   z-index: 3;
+  display: grid;
+  place-items: center;
   color: #fff;
   width: 30px;
   height: 30px;
+  font-size: 20px;
+  line-height: 0;
   border-radius: 50%;
   background: rgba(9, 9, 11, 0.5);
   backdrop-filter: blur(4px);
@@ -3632,14 +3722,14 @@ h3 {
 }
 .char-banner-side {
   position: absolute;
-  top: 16px;
-  right: 56px;
+  bottom: 16px;
+  right: 20px;
   z-index: 1;
   text-align: right;
 }
 .char-banner-side strong {
   display: block;
-  font-family: var(--font-fredoka), Fredoka, sans-serif;
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
   font-size: 22px;
   color: var(--gold-trim-bright);
 }
@@ -3831,10 +3921,10 @@ h3 {
   color: var(--text-soft);
 }
 .con-pill.active {
-  border-color: rgba(154, 159, 208, 0.6);
+  border-color: rgba(245, 158, 11, 0.6);
   background: var(--accent-ghost);
   color: var(--accent-light);
-  box-shadow: 0 0 12px rgba(154, 159, 208, 0.22);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.22);
 }
 .cd-select {
   display: grid;
@@ -3853,7 +3943,7 @@ h3 {
 }
 .cd-select select:focus {
   border-color: var(--accent-main);
-  box-shadow: 0 0 0 3px rgba(154, 159, 208, 0.16);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.16);
 }
 
 /* ---------- Gear planner: comp chips, equipped minis, image picker ---------- */
@@ -4052,10 +4142,10 @@ small.gear-follow-item {
   letter-spacing: 0.02em;
 }
 .gp-stars.r5 {
-  color: var(--gold-trim);
+  color: #f5c250;
 }
 .gp-stars.r4 {
-  color: var(--accent-main);
+  color: #b48bf0;
 }
 .gp-stars.r3 {
   color: var(--text-muted);
@@ -4203,7 +4293,7 @@ small.gear-follow-item {
 }
 .team-member.is-self .team-avatar {
   border-color: var(--gold-trim);
-  box-shadow: 0 0 10px rgba(211, 188, 142, 0.4);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
 }
 .team-member img {
   width: 100%;
@@ -4339,12 +4429,8 @@ small.gear-follow-item {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 950px) {
-  .sidebar {
-    width: 205px;
-    flex-basis: 205px;
-  }
-  .main-content {
-    padding: 30px 28px 50px;
+  .content-col {
+    padding: 30px 22px 50px;
   }
   .welcome-panel {
     padding: 28px;
@@ -4358,38 +4444,29 @@ small.gear-follow-item {
   }
 }
 @media (max-width: 700px) {
-  .app-shell {
-    display: block;
+  .topnav-inner {
+    padding: 10px 14px;
+    gap: 10px;
   }
-  .sidebar {
-    width: auto;
-    padding: 19px 20px 10px;
-    border-right: 0;
-    border-bottom: 1px solid var(--sidebar-border);
-  }
-  .workspace-label,
-  .sidebar-note,
-  .sidebar-footer {
+  .brand-word {
     display: none;
-  }
-  .nav-list {
-    display: flex;
-    margin-top: 19px;
-    overflow-x: auto;
   }
   .nav-item {
     flex: 0 0 auto;
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 7px 12px;
+    font-size: 12.5px;
   }
-  .main-content {
-    padding: 25px 16px 40px;
+  .refresh-label {
+    display: none;
   }
-  .topbar {
-    margin-bottom: 26px;
+  .content-col {
+    padding: 24px 15px 44px;
   }
-  .topbar h1 {
-    font-size: 20px;
+  .page-head {
+    margin-bottom: 22px;
+  }
+  .page-head h1 {
+    font-size: 21px;
   }
   .sync-status {
     display: none;
@@ -4490,4 +4567,146 @@ small.gear-follow-item {
   .mora-total {
     text-align: left;
   }
+}
+
+/* ============================================================
+   Observatory HUD — console panels, rule-line headers, mono data.
+   Appended last so it re-skins the shared component classes.
+   ============================================================ */
+
+/* Mono, tabular numerals for data readouts */
+.count-badge,
+.mora-total strong,
+.stat-card strong,
+.mat-qty,
+.need-need,
+.need-left,
+.need-own,
+.inv-qty,
+.gp-pct,
+.day-chip,
+.cd-value {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sharpen soft corners into technical console panels */
+.panel,
+.domain-card,
+.boss-card,
+.arti-card,
+.char-plan-card,
+.wall-card,
+.inv-item,
+.build-block,
+.grade-card,
+.map-modal,
+.connection-modal,
+.character-detail-modal.wide,
+.scan-modal,
+.sync-status,
+.count-badge {
+  border-radius: 4px;
+}
+.domain-card,
+.boss-card,
+.arti-card,
+.char-plan-card,
+.wall-card,
+.build-block,
+.grade-card {
+  border-color: var(--border-mid);
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--accent-main) 4%, transparent),
+    transparent 42%
+  );
+}
+
+/* Corner brackets on the big page panels (roster / guides / teams) */
+.panel {
+  position: relative;
+}
+.panel::before,
+.panel::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  pointer-events: none;
+  border: 2px solid var(--accent-main);
+  opacity: 0.75;
+}
+.panel::before {
+  top: -1px;
+  left: -1px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: 0;
+  border-top: 0;
+}
+
+/* Section headers → uppercase label + rule line + accent tick */
+.dash-section-head h3,
+.section-heading h3 {
+  font-family: var(--font-fredoka), "Bricolage Grotesque", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 15px;
+}
+.dash-section-head {
+  position: relative;
+  padding: 0 0 10px 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+.dash-section-head::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 11px;
+  width: 3px;
+  background: var(--accent-main);
+  box-shadow: 0 0 8px var(--accent-main);
+}
+.section-heading {
+  position: relative;
+  padding-left: 14px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  height: 30px;
+  width: 3px;
+  background: var(--accent-main);
+  box-shadow: 0 0 8px var(--accent-main);
+}
+
+/* Count badge → square mono chip */
+.count-badge {
+  min-width: 22px;
+  height: 18px;
+  background: color-mix(in srgb, var(--accent-main) 13%, transparent);
+}
+
+/* Day chips → terminal keys */
+.day-chip {
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+}
+
+/* Eyebrow labels get a leading HUD marker */
+.page-head .eyebrow::before,
+.dash-eyebrow::before {
+  content: "// ";
+  color: var(--accent-main);
+  font-weight: 700;
 }

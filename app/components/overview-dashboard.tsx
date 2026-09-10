@@ -675,7 +675,19 @@ export function OverviewDashboard({
                       aria-label={`Expand ${domain.location} map`}
                       title="Expand map"
                     >
-                      ⤢
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M9 3H3v6M3 3l7 7M15 21h6v-6M21 21l-7-7" />
+                      </svg>
                     </button>
                   )}
                 </div>
