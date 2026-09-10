@@ -31,6 +31,8 @@ import { clearPlan, loadPlan, savePlan, type BuildPlan } from "@/lib/plans";
 import { syncPlans } from "@/lib/user-sync";
 import { compArchetype, normalizeName } from "@/lib/character-guides";
 import type { ActiveComp } from "@/lib/active-comp";
+import type { Inventory } from "@/lib/inventory";
+import { getBundledConsensus } from "@/lib/consensus-data";
 import {
   findSet,
   findWeapon,
@@ -136,6 +138,47 @@ function Stepper({
 function Stars({ n }: { n: number | null | undefined }) {
   if (!n) return null;
   return <span className={`gp-stars r${n}`}>{"★".repeat(n)}</span>;
+}
+
+/** One material's have/need row: icon, name, needed, owned input, still-to-farm. */
+function NeedRow({
+  item,
+  owned,
+  onOwned,
+}: {
+  item: RemainingItem;
+  owned: number;
+  onOwned: (count: number) => void;
+}) {
+  const url = iconUrl(item.icon);
+  const farm = Math.max(0, item.count - owned);
+  return (
+    <div className={`need-row${farm === 0 ? " need-done" : ""}`}>
+      <span className={`mat-tile ${item.kind}`} title={item.name}>
+        {url ? (
+          <Image src={url} alt={item.name} width={40} height={40} />
+        ) : (
+          <span className="mat-fallback">{item.name.slice(0, 2)}</span>
+        )}
+      </span>
+      <span className="need-name">{item.name}</span>
+      <span className="need-need">need {formatCount(item.count)}</span>
+      <input
+        className="need-own"
+        type="number"
+        min={0}
+        inputMode="numeric"
+        placeholder="have"
+        value={owned || ""}
+        onChange={(event) =>
+          onOwned(Number.parseInt(event.target.value.replace(/\D/g, ""), 10) || 0)
+        }
+      />
+      <span className={`need-left${farm === 0 ? " zero" : ""}`}>
+        {farm === 0 ? "✓ done" : `farm ${formatCount(farm)}`}
+      </span>
+    </div>
+  );
 }
 
 export type GearRow = {
@@ -292,8 +335,10 @@ export function CharacterDetailModal({
   ownedIds = [],
   ownedWeapons = [],
   activeComp = null,
+  inventory = null,
   error,
   onRefresh,
+  onInventoryChange,
   onClose,
 }: {
   uid: string;
@@ -301,8 +346,10 @@ export function CharacterDetailModal({
   ownedIds?: number[];
   ownedWeapons?: Array<{ name: string; refinement: number; holder: string }>;
   activeComp?: ActiveComp | null;
+  inventory?: Inventory | null;
   error: string;
   onRefresh?: () => void;
+  onInventoryChange?: (next: Inventory | null) => void;
   onClose: () => void;
 }) {
   const [tab, setTab] = useState<"build" | "guide">("build");
@@ -312,6 +359,28 @@ export function CharacterDetailModal({
   const refreshing = Boolean(onRefresh) && !detail && !error;
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
   const owned = useMemo(() => new Set(ownedIds), [ownedIds]);
+
+  // Owned material counts from the shared inventory, matched by normalized name
+  // so scoped entries here line up with manual/imported counts on one key.
+  const matKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const ownedMats = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const [k, v] of Object.entries(inventory ?? {}))
+      if (typeof v === "number" && v > 0) map.set(matKey(k), v);
+    return map;
+  }, [inventory]);
+  const ownedFor = (name: string) => ownedMats.get(matKey(name)) ?? 0;
+  function setOwnedMat(name: string, count: number) {
+    if (!onInventoryChange) return;
+    const key = matKey(name);
+    // Rebuild without any existing spelling of this material, then re-add once
+    // under its display name — keeps a single canonical entry per material.
+    const next: Inventory = {};
+    for (const [k, v] of Object.entries(inventory ?? {}))
+      if (matKey(k) !== key) next[k] = v;
+    if (count > 0) next[name] = count;
+    onInventoryChange(Object.keys(next).length > 0 ? next : null);
+  }
   // Weapons the player actually has (equipped across their roster — the only
   // inventory HoYoLAB exposes), keyed by normalized name → best refinement.
   const ownedWeaponMap = useMemo(() => {
@@ -347,9 +416,13 @@ export function CharacterDetailModal({
     };
   }, [detail]);
 
+  // Prefer the freshly-fetched consensus; fall back to the bundled baseline so
+  // every character with community data shows a guide instantly (and offline).
   const communityConsensus =
-    !curatedGuide && detail && consensus?.characterId === detail.id
-      ? consensus
+    !curatedGuide && detail
+      ? consensus?.characterId === detail.id
+        ? consensus
+        : getBundledConsensus(detail.id)
       : null;
   const baseGuide =
     curatedGuide ??
@@ -1423,33 +1496,15 @@ export function CharacterDetailModal({
                           ✓ Nothing left — targets reached.
                         </p>
                       ) : (
-                        <div className="mat-tiles">
-                          {remaining.map((item) => {
-                            const url = iconUrl(item.icon);
-                            return (
-                              <span
-                                className={`mat-tile ${item.kind}`}
-                                key={item.name}
-                                title={item.name}
-                              >
-                                {url ? (
-                                  <Image
-                                    src={url}
-                                    alt={item.name}
-                                    width={40}
-                                    height={40}
-                                  />
-                                ) : (
-                                  <span className="mat-fallback">
-                                    {item.name.slice(0, 2)}
-                                  </span>
-                                )}
-                                <span className="mat-qty">
-                                  {formatCount(item.count)}
-                                </span>
-                              </span>
-                            );
-                          })}
+                        <div className="need-list">
+                          {remaining.map((item) => (
+                            <NeedRow
+                              key={item.name}
+                              item={item}
+                              owned={ownedFor(item.name)}
+                              onOwned={(count) => setOwnedMat(item.name, count)}
+                            />
+                          ))}
                         </div>
                       )}
                       {farmingCharacter?.bookDays && remaining.length > 0 && (
@@ -1480,33 +1535,15 @@ export function CharacterDetailModal({
                       <span className="build-label">
                         WEAPON MATERIALS → LV {targetWeaponLevel}
                       </span>
-                      <div className="mat-tiles">
-                        {weaponRemainingItems.map((item) => {
-                          const url = iconUrl(item.icon);
-                          return (
-                            <span
-                              className={`mat-tile ${item.kind}`}
-                              key={item.name}
-                              title={item.name}
-                            >
-                              {url ? (
-                                <Image
-                                  src={url}
-                                  alt={item.name}
-                                  width={40}
-                                  height={40}
-                                />
-                              ) : (
-                                <span className="mat-fallback">
-                                  {item.name.slice(0, 2)}
-                                </span>
-                              )}
-                              <span className="mat-qty">
-                                {formatCount(item.count)}
-                              </span>
-                            </span>
-                          );
-                        })}
+                      <div className="need-list">
+                        {weaponRemainingItems.map((item) => (
+                          <NeedRow
+                            key={item.name}
+                            item={item}
+                            owned={ownedFor(item.name)}
+                            onOwned={(count) => setOwnedMat(item.name, count)}
+                          />
+                        ))}
                       </div>
                       <p className="guide-footnote">
                         {plannedWeaponName}

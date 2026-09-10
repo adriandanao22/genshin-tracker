@@ -1,0 +1,4767 @@
+{
+  "extractedAt": "2026-09-10T11:28:19.105Z",
+  "characterCount": 118,
+  "consensus": {
+    "10000002": {
+      "characterId": 10000002,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Mistsplitter Reforged", "votes": 12, "rarity": 5 },
+        { "name": "Amenoma Kageuchi", "votes": 3, "rarity": 4 },
+        { "name": "Blackcliff Longsword", "votes": 2, "rarity": 4 },
+        { "name": "Summit Shaper", "votes": 1, "rarity": 5 },
+        { "name": "The Black Sword", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Blizzard Strayer", "votes": 19 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Noblesse Oblige", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 19 }],
+        "goblet": [{ "name": "Cryo DMG Bonus", "votes": 19 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 13 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000003": {
+      "characterId": 10000003,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Sword", "votes": 8, "rarity": 4 },
+        { "name": "Festering Desire", "votes": 2, "rarity": 4 },
+        { "name": "Amenoma Kageuchi", "votes": 2, "rarity": 4 },
+        { "name": "Aquila Favonia", "votes": 2, "rarity": 5 },
+        { "name": "Skyward Blade", "votes": 2, "rarity": 5 },
+        { "name": "Iron Sting", "votes": 1, "rarity": 4 },
+        { "name": "The Alley Flash", "votes": 1, "rarity": 4 },
+        { "name": "Harbinger of Dawn", "votes": 1, "rarity": 3 },
+        { "name": "Primordial Jade Cutter", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 16 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Deepwood Memories", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 11 },
+          { "name": "Anemo DMG Bonus", "votes": 8 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "Healing Bonus", "votes": 4 },
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "ATK%",
+        "CRIT Rate",
+        "CRIT DMG",
+        "Elemental Mastery"
+      ]
+    },
+    "10000006": {
+      "characterId": 10000006,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Mappa Mare", "votes": 3, "rarity": 4 },
+        { "name": "Solar Pearl", "votes": 2, "rarity": 4 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 2, "rarity": 5 },
+        { "name": "Kagura's Verity", "votes": 2, "rarity": 5 },
+        { "name": "Favonius Codex", "votes": 1, "rarity": 4 },
+        { "name": "Eye of Perception", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Atlas", "votes": 1, "rarity": 5 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 1,
+          "rarity": 3
+        },
+        { "name": "Fruit of Fulfillment", "votes": 1, "rarity": 4 },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 },
+        { "name": "A Thousand Floating Dreams", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Thundering Fury", "votes": 9 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Gilded Dreams", "votes": 2 },
+        { "name": "Thundersoother", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 },
+        { "name": "Flower of Paradise Lost", "votes": 1 },
+        { "name": "Emblem of Severed Fate", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 8 },
+          { "name": "Elemental Mastery", "votes": 5 },
+          { "name": "Energy Recharge", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 12 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "CRIT DMG", "votes": 6 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Energy Recharge",
+        "Elemental Mastery",
+        "ATK%"
+      ]
+    },
+    "10000014": {
+      "characterId": 10000014,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Prototype Amber", "votes": 5, "rarity": 4 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 5,
+          "rarity": 3
+        },
+        { "name": "Skyward Atlas", "votes": 2, "rarity": 5 },
+        { "name": "Favonius Codex", "votes": 2, "rarity": 4 },
+        { "name": "Wine and Song", "votes": 1, "rarity": 4 },
+        { "name": "Oathsworn Eye", "votes": 1, "rarity": 4 },
+        { "name": "Sacrificial Fragments", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Ocean-Hued Clam", "votes": 10 },
+        { "name": "Maiden Beloved", "votes": 5 },
+        { "name": "Gilded Dreams", "votes": 2 },
+        { "name": "Tenacity of the Millelith", "votes": 1 },
+        { "name": "Instructor", "votes": 1 },
+        { "name": "Vourukasha's Glow", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 14 },
+          { "name": "Elemental Mastery", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 15 },
+          { "name": "Hydro DMG Bonus", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 12 },
+          { "name": "HP%", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ]
+      },
+      "substats": [
+        "HP%",
+        "HP",
+        "Energy Recharge",
+        "Elemental Mastery",
+        "CRIT DMG"
+      ]
+    },
+    "10000015": {
+      "characterId": 10000015,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Aquila Favonia", "votes": 2, "rarity": 5 },
+        { "name": "Harbinger of Dawn", "votes": 2, "rarity": 3 },
+        { "name": "Favonius Sword", "votes": 2, "rarity": 4 },
+        { "name": "Wolf-Fang", "votes": 1, "rarity": 4 },
+        { "name": "Haran Geppaku Futsu", "votes": 1, "rarity": 5 },
+        { "name": "Iron Sting", "votes": 1, "rarity": 4 },
+        { "name": "The Black Sword", "votes": 1, "rarity": 4 },
+        { "name": "Kagotsurube Isshin", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Blade", "votes": 1, "rarity": 5 },
+        { "name": "Primordial Jade Cutter", "votes": 1, "rarity": 5 },
+        { "name": "Amenoma Kageuchi", "votes": 1, "rarity": 4 },
+        { "name": "Prototype Rancour", "votes": 1, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Blizzard Strayer", "votes": 12 },
+        { "name": "Pale Flame", "votes": 3 },
+        { "name": "Bloodstained Chivalry", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Emblem of Severed Fate", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 13 },
+          { "name": "Energy Recharge", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 12 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Physical DMG Bonus", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 12 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000016": {
+      "characterId": 10000016,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Wolf's Gravestone", "votes": 8, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 4, "rarity": 4 },
+        { "name": "Redhorn Stonethresher", "votes": 2, "rarity": 5 },
+        { "name": "Prototype Archaic", "votes": 2, "rarity": 4 },
+        { "name": "A Thousand Blazing Suns", "votes": 1, "rarity": 5 },
+        { "name": "Whiteblind", "votes": 1, "rarity": 4 },
+        { "name": "Rainslasher", "votes": 1, "rarity": 4 },
+        {
+          "name": "\"Ultimate Overlord's Mega Magic Sword\"",
+          "votes": 1,
+          "rarity": 4
+        }
+      ],
+      "sets": [
+        { "name": "Crimson Witch of Flames", "votes": 17 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Marechaussee Hunter", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 17 },
+          { "name": "Elemental Mastery", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Physical DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 14 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000020": {
+      "characterId": 10000020,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Song of Broken Pines", "votes": 2, "rarity": 5 },
+        { "name": "Prototype Archaic", "votes": 2, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 2, "rarity": 5 },
+        { "name": "Blackcliff Slasher", "votes": 2, "rarity": 4 },
+        { "name": "Tidal Shadow", "votes": 1, "rarity": 4 },
+        { "name": "Rainslasher", "votes": 1, "rarity": 4 },
+        { "name": "Bloodtainted Greatsword", "votes": 1, "rarity": 3 },
+        { "name": "Redhorn Stonethresher", "votes": 1, "rarity": 5 },
+        { "name": "Snow-Tombed Starsilver", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Pale Flame", "votes": 8 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Gilded Dreams", "votes": 2 },
+        { "name": "Bloodstained Chivalry", "votes": 2 },
+        { "name": "A Day Carved From Rising Winds", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 9 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "DEF%", "votes": 1 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Physical DMG Bonus", "votes": 8 },
+          { "name": "Electro DMG Bonus", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000021": {
+      "characterId": 10000021,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Elegy for the End", "votes": 3, "rarity": 5 },
+        { "name": "Amos' Bow", "votes": 3, "rarity": 5 },
+        { "name": "The Stringless", "votes": 3, "rarity": 4 },
+        { "name": "Favonius Warbow", "votes": 3, "rarity": 4 },
+        { "name": "Prototype Crescent", "votes": 2, "rarity": 4 },
+        { "name": "Fading Twilight", "votes": 1, "rarity": 4 },
+        { "name": "Compound Bow", "votes": 1, "rarity": 4 },
+        { "name": "Sharpshooter's Oath", "votes": 1, "rarity": 3 },
+        { "name": "Sacrificial Bow", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Crimson Witch of Flames", "votes": 7 },
+        { "name": "Noblesse Oblige", "votes": 4 },
+        { "name": "Wanderer's Troupe", "votes": 3 },
+        { "name": "Instructor", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Flower of Paradise Lost", "votes": 1 },
+        { "name": "Gilded Dreams", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 12 },
+          { "name": "Elemental Mastery", "votes": 3 },
+          { "name": "Energy Recharge", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 14 },
+          { "name": "Elemental Mastery", "votes": 3 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 3 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Energy Recharge",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000022": {
+      "characterId": 10000022,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Stringless", "votes": 9, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 5, "rarity": 5 },
+        { "name": "Elegy for the End", "votes": 3, "rarity": 5 },
+        { "name": "Rust", "votes": 1, "rarity": 4 },
+        { "name": "Aqua Simulacra", "votes": 1, "rarity": 5 },
+        { "name": "Favonius Warbow", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 17 },
+        { "name": "A Day Carved From Rising Winds", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Echoes of an Offering", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 8 },
+          { "name": "Elemental Mastery", "votes": 7 },
+          { "name": "Energy Recharge", "votes": 5 }
+        ],
+        "goblet": [
+          { "name": "Anemo DMG Bonus", "votes": 14 },
+          { "name": "Elemental Mastery", "votes": 6 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK"
+      ]
+    },
+    "10000023": {
+      "characterId": 10000023,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 6, "rarity": 4 },
+        { "name": "\"The Catch\"", "votes": 5, "rarity": 4 },
+        { "name": "Engulfing Lightning", "votes": 2, "rarity": 5 },
+        { "name": "Dragon's Bane", "votes": 2, "rarity": 4 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 1, "rarity": 5 },
+        { "name": "Staff of the Scarlet Sands", "votes": 1, "rarity": 5 },
+        { "name": "Staff of Homa", "votes": 1, "rarity": 5 },
+        { "name": "Blackcliff Pole", "votes": 1, "rarity": 4 },
+        { "name": "Dragonspine Spear", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 15 },
+        { "name": "Crimson Witch of Flames", "votes": 4 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 12 },
+          { "name": "ATK%", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 3 }
+        ],
+        "goblet": [{ "name": "Pyro DMG Bonus", "votes": 20 }],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 12 },
+          { "name": "CRIT DMG", "votes": 6 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Energy Recharge",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000024": {
+      "characterId": 10000024,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Greatsword", "votes": 4, "rarity": 4 },
+        { "name": "Skyward Pride", "votes": 4, "rarity": 5 },
+        { "name": "Blade of Atonement", "votes": 1, "rarity": 4 },
+        { "name": "Forest Regalia", "votes": 1, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 1, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 1, "rarity": 4 },
+        {
+          "name": "\"Ultimate Overlord's Mega Magic Sword\"",
+          "votes": 1,
+          "rarity": 4
+        }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 4 },
+        { "name": "Gladiator's Finale", "votes": 4 },
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Thundering Fury", "votes": 3 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 2 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 9 },
+          { "name": "Energy Recharge", "votes": 4 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 8 },
+          { "name": "ATK%", "votes": 5 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "CRIT DMG", "votes": 5 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Energy Recharge",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000025": {
+      "characterId": 10000025,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Sword", "votes": 8, "rarity": 4 },
+        { "name": "Wolf-Fang", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 6 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Wanderer's Troupe", "votes": 1 },
+        { "name": "Heart of Depth", "votes": 1 },
+        { "name": "Gilded Dreams", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 5 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 7 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "CRIT DMG", "votes": 2 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000026": {
+      "characterId": 10000026,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Primordial Jade Winged-Spear", "votes": 9, "rarity": 5 },
+        { "name": "Deathmatch", "votes": 4, "rarity": 4 },
+        { "name": "Calamity Queller", "votes": 2, "rarity": 5 },
+        { "name": "Blackcliff Pole", "votes": 2, "rarity": 4 },
+        { "name": "Staff of Homa", "votes": 1, "rarity": 5 },
+        { "name": "Dragonspine Spear", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Vermillion Hereafter", "votes": 11 },
+        { "name": "Gladiator's Finale", "votes": 8 },
+        { "name": "Viridescent Venerer", "votes": 6 },
+        { "name": "Shimenawa's Reminiscence", "votes": 4 },
+        { "name": "Echoes of an Offering", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 20 }],
+        "goblet": [
+          { "name": "Anemo DMG Bonus", "votes": 17 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000027": {
+      "characterId": 10000027,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 7, "rarity": 5 },
+        { "name": "Memory of Dust", "votes": 3, "rarity": 5 },
+        { "name": "Skyward Atlas", "votes": 3, "rarity": 5 },
+        { "name": "Solar Pearl", "votes": 2, "rarity": 4 },
+        { "name": "The Widsith", "votes": 2, "rarity": 4 },
+        { "name": "Eye of Perception", "votes": 1, "rarity": 4 },
+        { "name": "Dodoco Tales", "votes": 1, "rarity": 4 },
+        { "name": "Thrilling Tales of Dragon Slayers", "votes": 1, "rarity": 3 }
+      ],
+      "sets": [
+        { "name": "Archaic Petra", "votes": 13 },
+        { "name": "Gladiator's Finale", "votes": 11 },
+        { "name": "Shimenawa's Reminiscence", "votes": 5 },
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Vermillion Hereafter", "votes": 1 },
+        { "name": "Flower of Paradise Lost", "votes": 1 },
+        { "name": "Echoes of an Offering", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Energy Recharge", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 17 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 14 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000029": {
+      "characterId": 10000029,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Widsith", "votes": 10, "rarity": 4 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 7, "rarity": 5 },
+        { "name": "Tome of the Eternal Flow", "votes": 1, "rarity": 5 },
+        { "name": "Sacrificial Fragments", "votes": 1, "rarity": 4 },
+        { "name": "Dodoco Tales", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Crimson Witch of Flames", "votes": 17 },
+        { "name": "A Day Carved From Rising Winds", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Echoes of an Offering", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 11 },
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Elemental Mastery"]
+    },
+    "10000030": {
+      "characterId": 10000030,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Black Tassel", "votes": 9, "rarity": 3 },
+        { "name": "Favonius Lance", "votes": 5, "rarity": 4 },
+        { "name": "Staff of Homa", "votes": 3, "rarity": 5 },
+        { "name": "Vortex Vanquisher", "votes": 2, "rarity": 5 },
+        { "name": "Dragon's Bane", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Tenacity of the Millelith", "votes": 18 },
+        { "name": "Archaic Petra", "votes": 2 },
+        { "name": "Deepwood Memories", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 18 },
+          { "name": "Energy Recharge", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 15 },
+          { "name": "Geo DMG Bonus", "votes": 5 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 16 },
+          { "name": "CRIT DMG", "votes": 2 },
+          { "name": "CRIT Rate", "votes": 2 }
+        ]
+      },
+      "substats": ["HP%", "HP", "CRIT Rate", "CRIT DMG", "Energy Recharge"]
+    },
+    "10000031": {
+      "characterId": 10000031,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Stringless", "votes": 3, "rarity": 4 },
+        { "name": "Favonius Warbow", "votes": 3, "rarity": 4 },
+        { "name": "The Daybreak Chronicles", "votes": 1, "rarity": 5 },
+        { "name": "Rainbow Serpent's Rain Bow", "votes": 1, "rarity": 4 },
+        { "name": "Blackcliff Warbow", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 1, "rarity": 5 },
+        { "name": "Mitternachts Waltz", "votes": 1, "rarity": 4 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Golden Troupe", "votes": 7 },
+        { "name": "Thundering Fury", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Tenacity of the Millelith", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 10 },
+          { "name": "Energy Recharge", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 9 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 6 },
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "ATK%", "votes": 3 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000032": {
+      "characterId": 10000032,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Skyward Blade", "votes": 7, "rarity": 5 },
+        { "name": "Aquila Favonia", "votes": 5, "rarity": 5 },
+        { "name": "Sapwood Blade", "votes": 3, "rarity": 4 },
+        { "name": "Favonius Sword", "votes": 3, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 },
+        { "name": "Sacrificial Sword", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 17 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Crimson Witch of Flames", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 11 },
+          { "name": "HP%", "votes": 5 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 13 },
+          { "name": "Pyro DMG Bonus", "votes": 4 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 6 },
+          { "name": "HP%", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": ["Energy Recharge", "CRIT Rate", "HP%", "CRIT DMG", "ATK%"]
+    },
+    "10000033": {
+      "characterId": 10000033,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Polar Star", "votes": 7, "rarity": 5 },
+        { "name": "Rust", "votes": 3, "rarity": 4 },
+        { "name": "Aqua Simulacra", "votes": 2, "rarity": 5 },
+        { "name": "Thundering Pulse", "votes": 2, "rarity": 5 },
+        { "name": "Skyward Harp", "votes": 2, "rarity": 5 },
+        { "name": "Blackcliff Warbow", "votes": 1, "rarity": 4 },
+        { "name": "The Viridescent Hunt", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Heart of Depth", "votes": 16 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Thundersoother", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Nymph's Dream", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 13 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 17 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 13 },
+          { "name": "CRIT Rate", "votes": 5 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery",
+        "Energy Recharge"
+      ]
+    },
+    "10000034": {
+      "characterId": 10000034,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Whiteblind", "votes": 8, "rarity": 4 },
+        { "name": "Redhorn Stonethresher", "votes": 5, "rarity": 5 },
+        { "name": "Favonius Greatsword", "votes": 3, "rarity": 4 },
+        { "name": "Serpent Spine", "votes": 2, "rarity": 4 },
+        { "name": "The Bell", "votes": 1, "rarity": 4 },
+        { "name": "Prototype Archaic", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Husk of Opulent Dreams", "votes": 12 },
+        { "name": "Gladiator's Finale", "votes": 4 },
+        { "name": "Retracing Bolide", "votes": 2 },
+        { "name": "Archaic Petra", "votes": 2 },
+        { "name": "Wanderer's Troupe", "votes": 1 },
+        { "name": "Defender's Will", "votes": 1 },
+        { "name": "Marechaussee Hunter", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 16 },
+          { "name": "Energy Recharge", "votes": 2 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 14 },
+          { "name": "DEF%", "votes": 6 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "DEF%", "votes": 6 },
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "Energy Recharge", "DEF"]
+    },
+    "10000035": {
+      "characterId": 10000035,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Sword", "votes": 6, "rarity": 4 },
+        { "name": "Skyward Blade", "votes": 4, "rarity": 5 },
+        { "name": "Aquila Favonia", "votes": 3, "rarity": 5 },
+        { "name": "Finale of the Deep", "votes": 2, "rarity": 4 },
+        { "name": "The Flute", "votes": 1, "rarity": 4 },
+        { "name": "Freedom-Sworn", "votes": 1, "rarity": 5 },
+        { "name": "Sword of Narzissenkreuz", "votes": 1, "rarity": 4 },
+        { "name": "Sacrificial Sword", "votes": 1, "rarity": 4 },
+        { "name": "Amenoma Kageuchi", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Tenacity of the Millelith", "votes": 10 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Ocean-Hued Clam", "votes": 2 },
+        { "name": "Maiden Beloved", "votes": 2 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Blizzard Strayer", "votes": 1 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Celestial Gift", "votes": 1 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "HP%", "votes": 3 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "HP%", "votes": 2 },
+          { "name": "Cryo DMG Bonus", "votes": 1 },
+          { "name": "Dendro DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 12 },
+          { "name": "Healing Bonus", "votes": 3 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "DEF%", "votes": 1 }
+        ]
+      },
+      "substats": ["ATK%", "Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK"]
+    },
+    "10000036": {
+      "characterId": 10000036,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Skyward Pride", "votes": 4, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 3, "rarity": 4 },
+        { "name": "Favonius Greatsword", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificial Greatsword", "votes": 2, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 1, "rarity": 5 },
+        { "name": "Prototype Archaic", "votes": 1, "rarity": 4 },
+        { "name": "Luxurious Sea-Lord", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Blizzard Strayer", "votes": 8 },
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Emblem of Severed Fate", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 8 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 13 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "ATK%", "votes": 5 },
+          { "name": "CRIT Rate", "votes": 4 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "ATK%",
+        "CRIT Rate",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000037": {
+      "characterId": 10000037,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Amos' Bow", "votes": 12, "rarity": 5 },
+        { "name": "Prototype Crescent", "votes": 3, "rarity": 4 },
+        { "name": "Thundering Pulse", "votes": 1, "rarity": 5 },
+        { "name": "Hamayumi", "votes": 1, "rarity": 4 },
+        { "name": "Favonius Warbow", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Wanderer's Troupe", "votes": 9 },
+        { "name": "Blizzard Strayer", "votes": 7 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 17 },
+          { "name": "Energy Recharge", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 11 },
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000038": {
+      "characterId": 10000038,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Cinnabar Spindle", "votes": 16, "rarity": 4 },
+        { "name": "Harbinger of Dawn", "votes": 3, "rarity": 3 },
+        { "name": "Prototype Rancour", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Husk of Opulent Dreams", "votes": 13 },
+        { "name": "Archaic Petra", "votes": 6 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Nighttime Whispers in the Echoing Woods", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 16 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 16 },
+          { "name": "DEF%", "votes": 4 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "DEF%", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "DEF%", "CRIT DMG", "DEF", "ATK%"]
+    },
+    "10000039": {
+      "characterId": 10000039,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Bow", "votes": 11, "rarity": 4 },
+        { "name": "Favonius Warbow", "votes": 7, "rarity": 4 },
+        { "name": "Elegy for the End", "votes": 1, "rarity": 5 },
+        { "name": "Compound Bow", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 11 },
+        { "name": "Tenacity of the Millelith", "votes": 6 },
+        { "name": "Blizzard Strayer", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Maiden Beloved", "votes": 1 },
+        { "name": "Instructor", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 14 },
+          { "name": "Energy Recharge", "votes": 6 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 19 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 10 },
+          { "name": "Healing Bonus", "votes": 6 },
+          { "name": "CRIT Rate", "votes": 4 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "HP%",
+        "HP",
+        "CRIT Rate",
+        "Elemental Mastery"
+      ]
+    },
+    "10000041": {
+      "characterId": 10000041,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Codex", "votes": 7, "rarity": 4 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 1,
+          "rarity": 3
+        },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Atlas", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 4 },
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Celestial Gift", "votes": 2 },
+        { "name": "Heart of Depth", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 5 },
+          { "name": "ATK%", "votes": 5 }
+        ],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 9 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "CRIT DMG", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000042": {
+      "characterId": 10000042,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Primordial Jade Cutter", "votes": 3, "rarity": 5 },
+        { "name": "Lion's Roar", "votes": 3, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 3, "rarity": 5 },
+        { "name": "Harbinger of Dawn", "votes": 1, "rarity": 3 },
+        { "name": "Calamity of Eshu", "votes": 1, "rarity": 4 },
+        { "name": "Moonweaver's Dawn", "votes": 1, "rarity": 4 },
+        { "name": "Amenoma Kageuchi", "votes": 1, "rarity": 4 },
+        { "name": "Aquila Favonia", "votes": 1, "rarity": 5 },
+        { "name": "Kagotsurube Isshin", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Blade", "votes": 1, "rarity": 5 },
+        { "name": "Blackcliff Longsword", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Thundering Fury", "votes": 14 },
+        { "name": "Gladiator's Finale", "votes": 4 },
+        { "name": "Thundersoother", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Vourukasha's Glow", "votes": 1 },
+        { "name": "Pale Flame", "votes": 1 },
+        { "name": "Bloodstained Chivalry", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 11 },
+          { "name": "Elemental Mastery", "votes": 4 },
+          { "name": "DEF%", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 14 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Physical DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Elemental Mastery",
+        "Energy Recharge"
+      ]
+    },
+    "10000043": {
+      "characterId": 10000043,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Fragments", "votes": 5, "rarity": 4 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 5,
+          "rarity": 3
+        },
+        { "name": "Wandering Evenstar", "votes": 1, "rarity": 4 },
+        { "name": "Prototype Amber", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Viridescent Venerer", "votes": 12 }],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 11 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [{ "name": "Elemental Mastery", "votes": 12 }],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 11 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG"
+      ]
+    },
+    "10000044": {
+      "characterId": 10000044,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Greatsword", "votes": 4, "rarity": 4 },
+        { "name": "Snow-Tombed Starsilver", "votes": 3, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 2, "rarity": 5 },
+        { "name": "Prototype Archaic", "votes": 2, "rarity": 4 },
+        { "name": "Luxurious Sea-Lord", "votes": 1, "rarity": 4 },
+        { "name": "Whiteblind", "votes": 1, "rarity": 4 },
+        { "name": "Favonius Greatsword", "votes": 1, "rarity": 4 },
+        { "name": "Serpent Spine", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Bloodstained Chivalry", "votes": 5 },
+        { "name": "Pale Flame", "votes": 4 },
+        { "name": "Husk of Opulent Dreams", "votes": 3 },
+        { "name": "Crimson Witch of Flames", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Retracing Bolide", "votes": 1 },
+        { "name": "Archaic Petra", "votes": 1 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Tenacity of the Millelith", "votes": 1 },
+        { "name": "Lavawalker", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 7 },
+          { "name": "DEF%", "votes": 5 },
+          { "name": "Energy Recharge", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Physical DMG Bonus", "votes": 6 },
+          { "name": "DEF%", "votes": 5 },
+          { "name": "Pyro DMG Bonus", "votes": 3 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "DEF%", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "CRIT DMG", "votes": 3 }
+        ]
+      },
+      "substats": ["DEF", "CRIT DMG", "CRIT Rate", "DEF%", "ATK%"]
+    },
+    "10000045": {
+      "characterId": 10000045,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 8, "rarity": 4 },
+        { "name": "\"The Catch\"", "votes": 2, "rarity": 4 },
+        { "name": "White Tassel", "votes": 2, "rarity": 3 },
+        { "name": "Skyward Spine", "votes": 2, "rarity": 5 },
+        { "name": "Dragonspine Spear", "votes": 1, "rarity": 4 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 1, "rarity": 5 },
+        { "name": "Staff of Homa", "votes": 1, "rarity": 5 },
+        { "name": "Engulfing Lightning", "votes": 1, "rarity": 5 },
+        { "name": "Calamity Queller", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 11 },
+        { "name": "Blizzard Strayer", "votes": 8 },
+        { "name": "Emblem of Severed Fate", "votes": 5 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 14 },
+          { "name": "Energy Recharge", "votes": 6 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 18 },
+          { "name": "Physical DMG Bonus", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 16 },
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "Energy Recharge", "CRIT DMG", "ATK%", "ATK"]
+    },
+    "10000046": {
+      "characterId": 10000046,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Staff of Homa", "votes": 12, "rarity": 5 },
+        { "name": "Deathmatch", "votes": 4, "rarity": 4 },
+        { "name": "Dragon's Bane", "votes": 3, "rarity": 4 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Crimson Witch of Flames", "votes": 18 },
+        { "name": "Shimenawa's Reminiscence", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 14 },
+          { "name": "ATK%", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 18 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 10 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "HP%", "Elemental Mastery", "ATK%"]
+    },
+    "10000047": {
+      "characterId": 10000047,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Freedom-Sworn", "votes": 6, "rarity": 5 },
+        { "name": "Toukabou Shigure", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificial Sword", "votes": 2, "rarity": 4 },
+        { "name": "Iron Sting", "votes": 2, "rarity": 4 },
+        { "name": "Xiphos' Moonlight", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Blade", "votes": 1, "rarity": 5 },
+        { "name": "Kagotsurube Isshin", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 14 },
+        { "name": "Wanderer's Troupe", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 12 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 13 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Anemo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 12 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "10000048": {
+      "characterId": 10000048,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 10, "rarity": 5 },
+        { "name": "The Widsith", "votes": 5, "rarity": 4 },
+        { "name": "Dodoco Tales", "votes": 3, "rarity": 4 },
+        { "name": "Kagura's Verity", "votes": 2, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Wanderer's Troupe", "votes": 11 },
+        { "name": "Crimson Witch of Flames", "votes": 9 },
+        { "name": "Shimenawa's Reminiscence", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Energy Recharge", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 18 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 11 },
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Elemental Mastery",
+        "Energy Recharge"
+      ]
+    },
+    "10000049": {
+      "characterId": 10000049,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Thundering Pulse", "votes": 10, "rarity": 5 },
+        { "name": "Rust", "votes": 7, "rarity": 4 },
+        { "name": "Slingshot", "votes": 2, "rarity": 3 },
+        { "name": "The First Great Magic", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Shimenawa's Reminiscence", "votes": 18 },
+        { "name": "Crimson Witch of Flames", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Energy Recharge", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 19 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 12 },
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK", "ATK%", "Elemental Mastery"]
+    },
+    "10000050": {
+      "characterId": 10000050,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 5, "rarity": 4 },
+        { "name": "Kitain Cross Spear", "votes": 4, "rarity": 4 },
+        { "name": "\"The Catch\"", "votes": 3, "rarity": 4 },
+        { "name": "Black Tassel", "votes": 2, "rarity": 3 },
+        { "name": "Dragon's Bane", "votes": 1, "rarity": 4 },
+        { "name": "Wavebreaker's Fin", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Staff of Homa", "votes": 1, "rarity": 5 },
+        { "name": "Moonpiercer", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Tenacity of the Millelith", "votes": 6 },
+        { "name": "Emblem of Severed Fate", "votes": 6 },
+        { "name": "Gilded Dreams", "votes": 4 },
+        { "name": "Flower of Paradise Lost", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Crimson Witch of Flames", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Husk of Opulent Dreams", "votes": 1 },
+        { "name": "Retracing Bolide", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 9 },
+          { "name": "Elemental Mastery", "votes": 7 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 7 },
+          { "name": "HP%", "votes": 7 },
+          { "name": "Elemental Mastery", "votes": 6 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 8 },
+          { "name": "HP%", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "HP%",
+        "CRIT Rate",
+        "Elemental Mastery",
+        "HP"
+      ]
+    },
+    "10000051": {
+      "characterId": 10000051,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Wolf's Gravestone", "votes": 7, "rarity": 5 },
+        { "name": "Song of Broken Pines", "votes": 6, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 2, "rarity": 4 },
+        { "name": "The Unforged", "votes": 2, "rarity": 5 },
+        { "name": "Snow-Tombed Starsilver", "votes": 1, "rarity": 4 },
+        { "name": "Prototype Archaic", "votes": 1, "rarity": 4 },
+        { "name": "Beacon of the Reed Sea", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Pale Flame", "votes": 18 },
+        { "name": "Bloodstained Chivalry", "votes": 5 },
+        { "name": "Gladiator's Finale", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 20 }],
+        "goblet": [{ "name": "Physical DMG Bonus", "votes": 20 }],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 12 },
+          { "name": "CRIT DMG", "votes": 8 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000052": {
+      "characterId": 10000052,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Engulfing Lightning", "votes": 4, "rarity": 5 },
+        { "name": "\"The Catch\"", "votes": 2, "rarity": 4 },
+        { "name": "Favonius Lance", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 },
+        { "name": "Kitain Cross Spear", "votes": 1, "rarity": 4 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [{ "name": "Emblem of Severed Fate", "votes": 10 }],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 5 },
+          { "name": "ATK%", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 7 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "ATK%", "votes": 2 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "Energy Recharge", "ATK%", "HP"]
+    },
+    "10000053": {
+      "characterId": 10000053,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Wolf's Gravestone", "votes": 4, "rarity": 5 },
+        { "name": "Favonius Greatsword", "votes": 3, "rarity": 4 },
+        { "name": "Rainslasher", "votes": 3, "rarity": 4 },
+        { "name": "Makhaira Aquamarine", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificial Greatsword", "votes": 2, "rarity": 4 },
+        { "name": "Skyward Pride", "votes": 2, "rarity": 5 },
+        { "name": "Mailed Flower", "votes": 1, "rarity": 4 },
+        { "name": "Verdict", "votes": 1, "rarity": 5 },
+        { "name": "Katsuragikiri Nagamasa", "votes": 1, "rarity": 4 },
+        { "name": "Blackcliff Slasher", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 14 },
+        { "name": "Maiden Beloved", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Wanderer's Troupe", "votes": 2 },
+        { "name": "Gilded Dreams", "votes": 1 },
+        { "name": "Ocean-Hued Clam", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Desert Pavilion Chronicle", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 11 },
+          { "name": "Energy Recharge", "votes": 6 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 9 },
+          { "name": "Anemo DMG Bonus", "votes": 6 },
+          { "name": "Elemental Mastery", "votes": 5 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 5 },
+          { "name": "Healing Bonus", "votes": 5 },
+          { "name": "ATK%", "votes": 5 },
+          { "name": "CRIT DMG", "votes": 2 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "ATK%",
+        "CRIT Rate",
+        "ATK"
+      ]
+    },
+    "10000054": {
+      "characterId": 10000054,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Prototype Amber", "votes": 5, "rarity": 4 },
+        { "name": "Everlasting Moonglow", "votes": 4, "rarity": 5 },
+        { "name": "Sacrificial Fragments", "votes": 2, "rarity": 4 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 1,
+          "rarity": 3
+        },
+        { "name": "Favonius Codex", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Ocean-Hued Clam", "votes": 12 },
+        { "name": "Tenacity of the Millelith", "votes": 1 },
+        { "name": "Flower of Paradise Lost", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 10 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "Hydro DMG Bonus", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 8 },
+          { "name": "HP%", "votes": 4 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["HP%", "HP", "Energy Recharge", "Elemental Mastery", "ATK%"]
+    },
+    "10000055": {
+      "characterId": 10000055,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Warbow", "votes": 17, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 1, "rarity": 5 },
+        { "name": "Ibis Piercer", "votes": 1, "rarity": 4 },
+        { "name": "Sacrificial Bow", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Husk of Opulent Dreams", "votes": 10 },
+        { "name": "Noblesse Oblige", "votes": 5 },
+        { "name": "The Exile", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Archaic Petra", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 13 },
+          { "name": "DEF%", "votes": 6 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "DEF%", "votes": 17 },
+          { "name": "Geo DMG Bonus", "votes": 2 },
+          { "name": "Physical DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 12 },
+          { "name": "DEF%", "votes": 5 },
+          { "name": "Healing Bonus", "votes": 1 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["Energy Recharge", "CRIT Rate", "DEF%", "DEF", "CRIT DMG"]
+    },
+    "10000056": {
+      "characterId": 10000056,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Skyward Harp", "votes": 8, "rarity": 5 },
+        { "name": "Fading Twilight", "votes": 4, "rarity": 4 },
+        { "name": "Mouun's Moon", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificial Bow", "votes": 1, "rarity": 4 },
+        { "name": "Favonius Warbow", "votes": 1, "rarity": 4 },
+        { "name": "Alley Hunter", "votes": 1, "rarity": 4 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 },
+        { "name": "Elegy for the End", "votes": 1, "rarity": 5 },
+        { "name": "Polar Star", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 10 },
+        { "name": "Noblesse Oblige", "votes": 7 },
+        { "name": "Tenacity of the Millelith", "votes": 2 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Thundering Fury", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 12 },
+          { "name": "ATK%", "votes": 8 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 11 },
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "Energy Recharge",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000057": {
+      "characterId": 10000057,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Redhorn Stonethresher", "votes": 12, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 7, "rarity": 4 },
+        { "name": "Whiteblind", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Husk of Opulent Dreams", "votes": 20 }],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 17 },
+          { "name": "ATK%", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 19 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 14 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "Energy Recharge", "DEF"]
+    },
+    "10000058": {
+      "characterId": 10000058,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Kagura's Verity", "votes": 5, "rarity": 5 },
+        { "name": "The Widsith", "votes": 4, "rarity": 4 },
+        { "name": "Reliquary of Truth", "votes": 2, "rarity": 5 },
+        { "name": "Wandering Evenstar", "votes": 1, "rarity": 4 },
+        { "name": "Starcaller's Watch", "votes": 1, "rarity": 5 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Disenchantment in Deep Shadow", "votes": 11 },
+        { "name": "Golden Troupe", "votes": 2 },
+        { "name": "Gilded Dreams", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 12 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 10 },
+          { "name": "Electro DMG Bonus", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery", "ATK"]
+    },
+    "10000059": {
+      "characterId": 10000059,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Widsith", "votes": 5, "rarity": 4 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 4, "rarity": 5 },
+        { "name": "Kagura's Verity", "votes": 2, "rarity": 5 },
+        { "name": "Solar Pearl", "votes": 2, "rarity": 4 },
+        { "name": "Skyward Atlas", "votes": 2, "rarity": 5 },
+        { "name": "Oathsworn Eye", "votes": 1, "rarity": 4 },
+        { "name": "Memory of Dust", "votes": 1, "rarity": 5 },
+        { "name": "Emerald Orb", "votes": 1, "rarity": 3 },
+        { "name": "Mappa Mare", "votes": 1, "rarity": 4 },
+        { "name": "Tulaytullah's Remembrance", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 19 },
+        { "name": "Shimenawa's Reminiscence", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Thundersoother", "votes": 1 },
+        { "name": "Echoes of an Offering", "votes": 1 },
+        { "name": "Desert Pavilion Chronicle", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Elemental Mastery", "votes": 3 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [{ "name": "Anemo DMG Bonus", "votes": 20 }],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 10 },
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "ATK%", "votes": 2 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery",
+        "Energy Recharge"
+      ]
+    },
+    "10000060": {
+      "characterId": 10000060,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Aqua Simulacra", "votes": 4, "rarity": 5 },
+        { "name": "Favonius Warbow", "votes": 3, "rarity": 4 },
+        { "name": "Elegy for the End", "votes": 2, "rarity": 5 },
+        { "name": "The Stringless", "votes": 1, "rarity": 4 },
+        { "name": "Rust", "votes": 1, "rarity": 4 },
+        { "name": "Fading Twilight", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 10 },
+        { "name": "Vermillion Hereafter", "votes": 1 },
+        { "name": "Tenacity of the Millelith", "votes": 1 },
+        { "name": "Heart of Depth", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "Energy Recharge", "votes": 4 }
+        ],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 9 },
+          { "name": "HP%", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "CRIT DMG", "votes": 4 },
+          { "name": "HP%", "votes": 3 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "Energy Recharge", "HP%", "HP"]
+    },
+    "10000061": {
+      "characterId": 10000061,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sapwood Blade", "votes": 5, "rarity": 4 },
+        { "name": "The Alley Flash", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificial Sword", "votes": 2, "rarity": 4 },
+        { "name": "Key of Khaj-Nisut", "votes": 1, "rarity": 5 },
+        { "name": "Primordial Jade Cutter", "votes": 1, "rarity": 5 },
+        { "name": "Iron Sting", "votes": 1, "rarity": 4 },
+        { "name": "Kagotsurube Isshin", "votes": 1, "rarity": 4 },
+        { "name": "Splendor of Tranquil Waters", "votes": 1, "rarity": 5 },
+        { "name": "Favonius Sword", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Deepwood Memories", "votes": 5 },
+        { "name": "Tenacity of the Millelith", "votes": 4 },
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Vourukasha's Glow", "votes": 3 },
+        { "name": "Gilded Dreams", "votes": 1 },
+        { "name": "Golden Troupe", "votes": 1 },
+        { "name": "Instructor", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 11 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 12 },
+          { "name": "Dendro DMG Bonus", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 11 },
+          { "name": "CRIT DMG", "votes": 2 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "HP%",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "Elemental Mastery"
+      ]
+    },
+    "10000062": {
+      "characterId": 10000062,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Thundering Pulse", "votes": 4, "rarity": 5 },
+        { "name": "Rust", "votes": 3, "rarity": 4 },
+        { "name": "Hunter's Path", "votes": 2, "rarity": 5 },
+        { "name": "The Stringless", "votes": 2, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 2, "rarity": 5 },
+        { "name": "Favonius Warbow", "votes": 1, "rarity": 4 },
+        { "name": "The First Great Magic", "votes": 1, "rarity": 5 },
+        { "name": "Sacrificial Bow", "votes": 1, "rarity": 4 },
+        { "name": "Predator", "votes": 1, "rarity": 4 },
+        { "name": "Seasoned Hunter's Bow", "votes": 1, "rarity": 2 },
+        { "name": "Hunter's Bow", "votes": 1, "rarity": 1 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Blizzard Strayer", "votes": 14 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Pale Flame", "votes": 2 },
+        { "name": "Echoes of an Offering", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Golden Troupe", "votes": 1 },
+        { "name": "Gilded Dreams", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 },
+        { "name": "Lucky Dog", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 15 },
+          { "name": "Elemental Mastery", "votes": 3 },
+          { "name": "Energy Recharge", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 13 },
+          { "name": "ATK%", "votes": 4 },
+          { "name": "Physical DMG Bonus", "votes": 2 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Healing Bonus", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000063": {
+      "characterId": 10000063,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Calamity Queller", "votes": 5, "rarity": 5 },
+        { "name": "Favonius Lance", "votes": 5, "rarity": 4 },
+        { "name": "Missive Windspear", "votes": 5, "rarity": 4 },
+        { "name": "Wavebreaker's Fin", "votes": 1, "rarity": 4 },
+        { "name": "Lithic Spear", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 },
+        { "name": "Tamayuratei no Ohanashi", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Shimenawa's Reminiscence", "votes": 13 },
+        { "name": "Gladiator's Finale", "votes": 11 },
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Echoes of an Offering", "votes": 1 },
+        { "name": "Nymph's Dream", "votes": 1 },
+        { "name": "Tenacity of the Millelith", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Electro DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["ATK%", "Energy Recharge", "ATK", "CRIT Rate", "CRIT DMG"]
+    },
+    "10000064": {
+      "characterId": 10000064,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 13, "rarity": 4 },
+        { "name": "Prototype Starglitter", "votes": 3, "rarity": 4 },
+        { "name": "\"The Catch\"", "votes": 2, "rarity": 4 },
+        { "name": "Moonpiercer", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Husk of Opulent Dreams", "votes": 15 },
+        { "name": "Noblesse Oblige", "votes": 4 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Deepwood Memories", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 17 },
+          { "name": "Energy Recharge", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "DEF%", "votes": 18 },
+          { "name": "HP%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "DEF%", "votes": 15 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["DEF%", "Energy Recharge", "DEF", "CRIT Rate", "HP%"]
+    },
+    "10000065": {
+      "characterId": 10000065,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Iron Sting", "votes": 10, "rarity": 4 },
+        { "name": "Toukabou Shigure", "votes": 3, "rarity": 4 },
+        { "name": "Xiphos' Moonlight", "votes": 2, "rarity": 4 },
+        { "name": "Key of Khaj-Nisut", "votes": 2, "rarity": 5 },
+        { "name": "The Dockhand's Assistant", "votes": 1, "rarity": 4 },
+        { "name": "The Flute", "votes": 1, "rarity": 4 },
+        { "name": "Moonweaver's Dawn", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Gilded Dreams", "votes": 8 },
+        { "name": "Tenacity of the Millelith", "votes": 4 },
+        { "name": "Flower of Paradise Lost", "votes": 4 },
+        { "name": "Wanderer's Troupe", "votes": 2 },
+        { "name": "Deepwood Memories", "votes": 2 },
+        { "name": "The Exile", "votes": 1 },
+        { "name": "Heart of the Furnace", "votes": 1 },
+        { "name": "Thundering Fury", "votes": 1 },
+        { "name": "Ocean-Hued Clam", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 13 },
+          { "name": "HP%", "votes": 4 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 11 },
+          { "name": "HP%", "votes": 5 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Electro DMG Bonus", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 10 },
+          { "name": "Healing Bonus", "votes": 6 },
+          { "name": "HP%", "votes": 3 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "HP%",
+        "CRIT Rate",
+        "CRIT DMG"
+      ]
+    },
+    "10000066": {
+      "characterId": 10000066,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Black Sword", "votes": 6, "rarity": 4 },
+        { "name": "Haran Geppaku Futsu", "votes": 5, "rarity": 5 },
+        { "name": "Primordial Jade Cutter", "votes": 3, "rarity": 5 },
+        { "name": "Blackcliff Longsword", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificial Sword", "votes": 1, "rarity": 4 },
+        { "name": "Amenoma Kageuchi", "votes": 1, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Echoes of an Offering", "votes": 10 },
+        { "name": "Gladiator's Finale", "votes": 6 },
+        { "name": "Heart of Depth", "votes": 2 },
+        { "name": "Thundering Fury", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 12 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000067": {
+      "characterId": 10000067,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Bow", "votes": 4, "rarity": 4 },
+        { "name": "The Stringless", "votes": 4, "rarity": 4 },
+        { "name": "Favonius Warbow", "votes": 3, "rarity": 4 },
+        { "name": "Fading Twilight", "votes": 2, "rarity": 4 },
+        { "name": "Elegy for the End", "votes": 2, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Deepwood Memories", "votes": 8 },
+        { "name": "Gilded Dreams", "votes": 4 },
+        { "name": "Instructor", "votes": 2 },
+        { "name": "Wanderer's Troupe", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 8 },
+          { "name": "ATK%", "votes": 5 },
+          { "name": "Energy Recharge", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Dendro DMG Bonus", "votes": 7 },
+          { "name": "Elemental Mastery", "votes": 7 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 8 },
+          { "name": "CRIT DMG", "votes": 4 },
+          { "name": "CRIT Rate", "votes": 3 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "10000068": {
+      "characterId": 10000068,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Greatsword", "votes": 11, "rarity": 4 },
+        { "name": "Favonius Greatsword", "votes": 4, "rarity": 4 },
+        { "name": "The Bell", "votes": 3, "rarity": 4 },
+        { "name": "Makhaira Aquamarine", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Tenacity of the Millelith", "votes": 7 },
+        { "name": "Noblesse Oblige", "votes": 5 },
+        { "name": "Gilded Dreams", "votes": 3 },
+        { "name": "Instructor", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Ocean-Hued Clam", "votes": 2 },
+        { "name": "Song of Days Past", "votes": 1 },
+        { "name": "Maiden Beloved", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 9 },
+          { "name": "Energy Recharge", "votes": 7 },
+          { "name": "Elemental Mastery", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 17 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 10 },
+          { "name": "HP%", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "CRIT Rate", "votes": 2 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "HP%",
+        "HP",
+        "Elemental Mastery",
+        "CRIT Rate"
+      ]
+    },
+    "10000069": {
+      "characterId": 10000069,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Skyward Harp", "votes": 5, "rarity": 5 },
+        { "name": "Hunter's Path", "votes": 3, "rarity": 5 },
+        { "name": "Aqua Simulacra", "votes": 2, "rarity": 5 },
+        { "name": "The First Great Magic", "votes": 2, "rarity": 5 },
+        { "name": "The Stringless", "votes": 1, "rarity": 4 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Wanderer's Troupe", "votes": 9 },
+        { "name": "Deepwood Memories", "votes": 3 },
+        { "name": "Gilded Dreams", "votes": 3 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 10 },
+          { "name": "ATK%", "votes": 4 }
+        ],
+        "goblet": [
+          { "name": "Dendro DMG Bonus", "votes": 11 },
+          { "name": "Elemental Mastery", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "Elemental Mastery",
+        "CRIT Rate",
+        "ATK%",
+        "Energy Recharge"
+      ]
+    },
+    "10000070": {
+      "characterId": 10000070,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Key of Khaj-Nisut", "votes": 8, "rarity": 5 },
+        { "name": "Sacrificial Sword", "votes": 2, "rarity": 4 },
+        { "name": "Primordial Jade Cutter", "votes": 1, "rarity": 5 },
+        { "name": "Xiphos' Moonlight", "votes": 1, "rarity": 4 },
+        { "name": "Amenoma Kageuchi", "votes": 1, "rarity": 4 },
+        { "name": "Iron Sting", "votes": 1, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Tenacity of the Millelith", "votes": 13 },
+        { "name": "Gilded Dreams", "votes": 6 },
+        { "name": "Wanderer's Troupe", "votes": 3 },
+        { "name": "Vourukasha's Glow", "votes": 1 },
+        { "name": "Heart of Depth", "votes": 1 },
+        { "name": "Flower of Paradise Lost", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "HP%", "votes": 15 }],
+        "goblet": [{ "name": "HP%", "votes": 15 }],
+        "circlet": [
+          { "name": "HP%", "votes": 13 },
+          { "name": "CRIT DMG", "votes": 2 }
+        ]
+      },
+      "substats": [
+        "HP%",
+        "HP",
+        "Elemental Mastery",
+        "CRIT Rate",
+        "Energy Recharge"
+      ]
+    },
+    "10000071": {
+      "characterId": 10000071,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Staff of the Scarlet Sands", "votes": 11, "rarity": 5 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 4, "rarity": 5 },
+        { "name": "Missive Windspear", "votes": 2, "rarity": 4 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Blackcliff Pole", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Thundering Fury", "votes": 7 },
+        { "name": "Gilded Dreams", "votes": 6 },
+        { "name": "Gladiator's Finale", "votes": 4 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 3 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 10 },
+          { "name": "ATK%", "votes": 9 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 13 },
+          { "name": "ATK%", "votes": 6 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 11 },
+          { "name": "CRIT Rate", "votes": 8 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "Elemental Mastery",
+        "ATK%",
+        "Energy Recharge"
+      ]
+    },
+    "10000072": {
+      "characterId": 10000072,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 6, "rarity": 4 },
+        { "name": "Black Tassel", "votes": 3, "rarity": 3 },
+        { "name": "Staff of Homa", "votes": 2, "rarity": 5 },
+        { "name": "\"The Catch\"", "votes": 1, "rarity": 4 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Kitain Cross Spear", "votes": 1, "rarity": 4 },
+        { "name": "Calamity Queller", "votes": 1, "rarity": 5 },
+        { "name": "Dialogues of the Desert Sages", "votes": 1, "rarity": 4 },
+        { "name": "Engulfing Lightning", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 7 },
+        { "name": "Emblem of Severed Fate", "votes": 6 },
+        { "name": "Tenacity of the Millelith", "votes": 4 },
+        { "name": "Heart of Depth", "votes": 2 },
+        { "name": "Viridescent Venerer", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Instructor", "votes": 1 },
+        { "name": "Echoes of an Offering", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "Energy Recharge", "votes": 5 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 11 },
+          { "name": "Hydro DMG Bonus", "votes": 5 },
+          { "name": "Anemo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": ["HP%", "CRIT Rate", "HP", "Energy Recharge", "CRIT DMG"]
+    },
+    "10000073": {
+      "characterId": 10000073,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "A Thousand Floating Dreams", "votes": 6, "rarity": 5 },
+        { "name": "Sacrificial Fragments", "votes": 2, "rarity": 4 },
+        { "name": "Etherlight Spindlelute", "votes": 1, "rarity": 4 },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 },
+        { "name": "Fruit of Fulfillment", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Deepwood Memories", "votes": 11 }],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 10 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "Dendro DMG Bonus", "votes": 3 },
+          { "name": "Geo DMG Bonus", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 9 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "CRIT Rate",
+        "Energy Recharge",
+        "CRIT DMG",
+        "ATK"
+      ]
+    },
+    "10000074": {
+      "characterId": 10000074,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Sword", "votes": 7, "rarity": 4 },
+        { "name": "The Dockhand's Assistant", "votes": 5, "rarity": 4 },
+        { "name": "Sacrificial Sword", "votes": 2, "rarity": 4 },
+        { "name": "Lion's Roar", "votes": 2, "rarity": 4 },
+        { "name": "Skyward Blade", "votes": 2, "rarity": 5 },
+        { "name": "Harbinger of Dawn", "votes": 1, "rarity": 3 },
+        { "name": "Key of Khaj-Nisut", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Tenacity of the Millelith", "votes": 17 },
+        { "name": "Vourukasha's Glow", "votes": 3 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Retracing Bolide", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Blizzard Strayer", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 18 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 19 },
+          { "name": "Cryo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [{ "name": "HP%", "votes": 20 }]
+      },
+      "substats": [
+        "HP%",
+        "HP",
+        "Energy Recharge",
+        "CRIT Rate",
+        "Elemental Mastery"
+      ]
+    },
+    "10000075": {
+      "characterId": 10000075,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Tulaytullah's Remembrance", "votes": 13, "rarity": 5 },
+        { "name": "Skyward Atlas", "votes": 2, "rarity": 5 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 1, "rarity": 5 },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 },
+        { "name": "Mappa Mare", "votes": 1, "rarity": 4 },
+        { "name": "Surf's Up", "votes": 1, "rarity": 5 },
+        { "name": "Memory of Dust", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Desert Pavilion Chronicle", "votes": 14 },
+        { "name": "Viridescent Venerer", "votes": 5 },
+        { "name": "Shimenawa's Reminiscence", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Blizzard Strayer", "votes": 1 },
+        { "name": "Marechaussee Hunter", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 20 }],
+        "goblet": [
+          { "name": "Anemo DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 15 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000076": {
+      "characterId": 10000076,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Warbow", "votes": 13, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 2, "rarity": 5 },
+        { "name": "Elegy for the End", "votes": 2, "rarity": 5 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 },
+        { "name": "Fading Twilight", "votes": 1, "rarity": 4 },
+        { "name": "Rainbow Serpent's Rain Bow", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 10 },
+        { "name": "Tenacity of the Millelith", "votes": 5 },
+        { "name": "Noblesse Oblige", "votes": 4 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Instructor", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 16 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Anemo DMG Bonus", "votes": 13 },
+          { "name": "ATK%", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 3 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 17 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "Energy Recharge",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000077": {
+      "characterId": 10000077,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 5, "rarity": 4 },
+        { "name": "Black Tassel", "votes": 5, "rarity": 3 },
+        { "name": "Dialogues of the Desert Sages", "votes": 2, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Deepwood Memories", "votes": 6 },
+        { "name": "Tenacity of the Millelith", "votes": 4 },
+        { "name": "Instructor", "votes": 1 },
+        { "name": "Ocean-Hued Clam", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 10 },
+          { "name": "Energy Recharge", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 11 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 9 },
+          { "name": "HP%", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "HP%",
+        "Energy Recharge",
+        "Elemental Mastery",
+        "CRIT Rate",
+        "HP"
+      ]
+    },
+    "10000078": {
+      "characterId": 10000078,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Light of Foliar Incision", "votes": 6, "rarity": 5 },
+        { "name": "Primordial Jade Cutter", "votes": 3, "rarity": 5 },
+        { "name": "Haran Geppaku Futsu", "votes": 2, "rarity": 5 },
+        { "name": "Blackcliff Longsword", "votes": 2, "rarity": 4 },
+        { "name": "Harbinger of Dawn", "votes": 2, "rarity": 3 },
+        { "name": "Toukabou Shigure", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Gilded Dreams", "votes": 16 },
+        { "name": "Deepwood Memories", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 15 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "goblet": [{ "name": "Dendro DMG Bonus", "votes": 16 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Elemental Mastery",
+        "ATK%",
+        "Energy Recharge"
+      ]
+    },
+    "10000079": {
+      "characterId": 10000079,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Beacon of the Reed Sea", "votes": 14, "rarity": 5 },
+        { "name": "Favonius Greatsword", "votes": 2, "rarity": 4 },
+        { "name": "The Bell", "votes": 1, "rarity": 4 },
+        { "name": "Sacrificial Greatsword", "votes": 1, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 1, "rarity": 5 },
+        { "name": "Mailed Flower", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Emblem of Severed Fate", "votes": 8 },
+        { "name": "Crimson Witch of Flames", "votes": 7 },
+        { "name": "Tenacity of the Millelith", "votes": 3 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Instructor", "votes": 1 },
+        { "name": "Vourukasha's Glow", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 7 },
+          { "name": "HP%", "votes": 6 },
+          { "name": "Energy Recharge", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 19 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "Energy Recharge", "HP%", "ATK%"]
+    },
+    "10000080": {
+      "characterId": 10000080,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 10, "rarity": 4 },
+        { "name": "Kitain Cross Spear", "votes": 2, "rarity": 4 },
+        { "name": "Black Tassel", "votes": 1, "rarity": 3 },
+        { "name": "Symphonist of Scents", "votes": 1, "rarity": 5 },
+        { "name": "Dialogues of the Desert Sages", "votes": 1, "rarity": 4 },
+        { "name": "Engulfing Lightning", "votes": 1, "rarity": 5 },
+        { "name": "Calamity Queller", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 9 },
+        { "name": "Tenacity of the Millelith", "votes": 4 },
+        { "name": "Emblem of Severed Fate", "votes": 4 },
+        { "name": "Ocean-Hued Clam", "votes": 3 },
+        { "name": "Vourukasha's Glow", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 10 },
+          { "name": "HP%", "votes": 7 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 14 },
+          { "name": "Cryo DMG Bonus", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "Healing Bonus", "votes": 4 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["Energy Recharge", "HP%", "CRIT Rate", "HP", "ATK%"]
+    },
+    "10000081": {
+      "characterId": 10000081,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Mailed Flower", "votes": 7, "rarity": 4 },
+        { "name": "Favonius Greatsword", "votes": 4, "rarity": 4 },
+        { "name": "Redhorn Stonethresher", "votes": 2, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 2, "rarity": 4 },
+        { "name": "Makhaira Aquamarine", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Pride", "votes": 1, "rarity": 5 },
+        { "name": "Sacrificial Greatsword", "votes": 1, "rarity": 4 },
+        { "name": "Forest Regalia", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Gilded Dreams", "votes": 5 },
+        { "name": "Flower of Paradise Lost", "votes": 5 },
+        { "name": "Deepwood Memories", "votes": 4 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 },
+        { "name": "Vourukasha's Glow", "votes": 1 },
+        { "name": "Marechaussee Hunter", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 7 },
+          { "name": "ATK%", "votes": 7 },
+          { "name": "Energy Recharge", "votes": 5 }
+        ],
+        "goblet": [
+          { "name": "Dendro DMG Bonus", "votes": 12 },
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "Energy Recharge",
+        "CRIT DMG",
+        "Elemental Mastery",
+        "ATK%"
+      ]
+    },
+    "10000082": {
+      "characterId": 10000082,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Prototype Amber", "votes": 12, "rarity": 4 },
+        { "name": "Jadefall's Splendor", "votes": 2, "rarity": 5 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 1,
+          "rarity": 3
+        },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Deepwood Memories", "votes": 7 },
+        { "name": "Tenacity of the Millelith", "votes": 5 },
+        { "name": "Vourukasha's Glow", "votes": 4 },
+        { "name": "Ocean-Hued Clam", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Maiden Beloved", "votes": 1 },
+        { "name": "Instructor", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 10 },
+          { "name": "Energy Recharge", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 14 },
+          { "name": "Dendro DMG Bonus", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 10 },
+          { "name": "Healing Bonus", "votes": 3 },
+          { "name": "CRIT Rate", "votes": 3 }
+        ]
+      },
+      "substats": [
+        "HP%",
+        "Energy Recharge",
+        "Elemental Mastery",
+        "CRIT Rate",
+        "HP"
+      ]
+    },
+    "10000083": {
+      "characterId": 10000083,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Sword", "votes": 4, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 2, "rarity": 5 },
+        { "name": "Harbinger of Dawn", "votes": 1, "rarity": 3 },
+        { "name": "Favonius Sword", "votes": 1, "rarity": 4 },
+        { "name": "Xiphos' Moonlight", "votes": 1, "rarity": 4 },
+        { "name": "Primordial Jade Cutter", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 8 },
+        { "name": "Vermillion Hereafter", "votes": 1 },
+        { "name": "Marechaussee Hunter", "votes": 1 },
+        { "name": "Desert Pavilion Chronicle", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 5 },
+          { "name": "Energy Recharge", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [{ "name": "Anemo DMG Bonus", "votes": 10 }],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "CRIT DMG", "votes": 4 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "Energy Recharge", "ATK", "ATK%"]
+    },
+    "10000084": {
+      "characterId": 10000084,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The First Great Magic", "votes": 8, "rarity": 5 },
+        { "name": "Aqua Simulacra", "votes": 2, "rarity": 5 },
+        { "name": "Skyward Harp", "votes": 1, "rarity": 5 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 },
+        { "name": "Scion of the Blazing Sun", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Marechaussee Hunter", "votes": 8 },
+        { "name": "Crimson Witch of Flames", "votes": 4 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Wanderer's Troupe", "votes": 1 },
+        { "name": "Echoes of an Offering", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 12 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [{ "name": "Pyro DMG Bonus", "votes": 13 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000085": {
+      "characterId": 10000085,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Snow-Tombed Starsilver", "votes": 7, "rarity": 4 },
+        { "name": "Song of Broken Pines", "votes": 5, "rarity": 5 },
+        { "name": "Wolf's Gravestone", "votes": 2, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Pride", "votes": 1, "rarity": 5 },
+        { "name": "The Bell", "votes": 1, "rarity": 4 },
+        { "name": "Prototype Archaic", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Pale Flame", "votes": 12 },
+        { "name": "Blizzard Strayer", "votes": 5 },
+        { "name": "Desert Pavilion Chronicle", "votes": 1 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Silken Moon's Serenade", "votes": 1 },
+        { "name": "Golden Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Energy Recharge", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Physical DMG Bonus", "votes": 14 },
+          { "name": "Cryo DMG Bonus", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 9 },
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000086": {
+      "characterId": 10000086,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Cashflow Supervision", "votes": 8, "rarity": 5 },
+        { "name": "The Widsith", "votes": 5, "rarity": 4 },
+        { "name": "Tulaytullah's Remembrance", "votes": 2, "rarity": 5 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 2, "rarity": 5 },
+        { "name": "Dawning Frost", "votes": 1, "rarity": 4 },
+        { "name": "Reliquary of Truth", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Marechaussee Hunter", "votes": 9 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 7 },
+        { "name": "Heart of the Furnace", "votes": 1 },
+        { "name": "Gladiator's Finale", "votes": 1 },
+        { "name": "Blizzard Strayer", "votes": 1 },
+        { "name": "Nighttime Whispers in the Echoing Woods", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 13 },
+          { "name": "ATK%", "votes": 6 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 13 },
+          { "name": "CRIT Rate", "votes": 6 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery", "ATK"]
+    },
+    "10000087": {
+      "characterId": 10000087,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Tome of the Eternal Flow", "votes": 4, "rarity": 5 },
+        { "name": "Prototype Amber", "votes": 2, "rarity": 4 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Marechaussee Hunter", "votes": 6 },
+        { "name": "Heart of Depth", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "HP%", "votes": 7 }],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 5 },
+          { "name": "HP%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 6 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "HP%", "HP", "Energy Recharge"]
+    },
+    "10000088": {
+      "characterId": 10000088,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Codex", "votes": 11, "rarity": 4 },
+        { "name": "Skyward Atlas", "votes": 3, "rarity": 5 },
+        { "name": "Twin Nephrite", "votes": 1, "rarity": 3 },
+        { "name": "Ballad of the Boundless Blue", "votes": 1, "rarity": 4 },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 },
+        { "name": "Oathsworn Eye", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 8 },
+        { "name": "Emblem of Severed Fate", "votes": 5 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Song of Days Past", "votes": 2 },
+        { "name": "Ocean-Hued Clam", "votes": 1 },
+        { "name": "Tenacity of the Millelith", "votes": 1 },
+        { "name": "Maiden Beloved", "votes": 1 },
+        { "name": "Unfinished Reverie", "votes": 1 },
+        { "name": "Blizzard Strayer", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 12 },
+          { "name": "ATK%", "votes": 6 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 15 },
+          { "name": "Cryo DMG Bonus", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 9 },
+          { "name": "ATK%", "votes": 4 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG", "ATK"]
+    },
+    "10000089": {
+      "characterId": 10000089,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Sword", "votes": 3, "rarity": 4 },
+        { "name": "Splendor of Tranquil Waters", "votes": 2, "rarity": 5 },
+        { "name": "Festering Desire", "votes": 2, "rarity": 4 },
+        { "name": "Key of Khaj-Nisut", "votes": 1, "rarity": 5 },
+        { "name": "Finale of the Deep", "votes": 1, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Golden Troupe", "votes": 9 },
+        { "name": "Tenacity of the Millelith", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "HP%", "votes": 10 }],
+        "goblet": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "Hydro DMG Bonus", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "HP%", "votes": 3 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "HP%", "Energy Recharge", "HP"]
+    },
+    "10000090": {
+      "characterId": 10000090,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Dialogues of the Desert Sages", "votes": 10, "rarity": 4 },
+        { "name": "Black Tassel", "votes": 5, "rarity": 3 },
+        { "name": "Favonius Lance", "votes": 4, "rarity": 4 },
+        { "name": "Staff of Homa", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Song of Days Past", "votes": 9 },
+        { "name": "Noblesse Oblige", "votes": 5 },
+        { "name": "Tenacity of the Millelith", "votes": 5 },
+        { "name": "Vourukasha's Glow", "votes": 3 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Lavawalker", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 17 },
+          { "name": "Energy Recharge", "votes": 3 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 19 },
+          { "name": "Pyro DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 16 },
+          { "name": "Healing Bonus", "votes": 3 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["HP%", "Energy Recharge", "CRIT Rate", "HP", "CRIT DMG"]
+    },
+    "10000091": {
+      "characterId": 10000091,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Verdict", "votes": 6, "rarity": 5 },
+        { "name": "Serpent Spine", "votes": 5, "rarity": 4 },
+        { "name": "Sacrificial Greatsword", "votes": 4, "rarity": 4 },
+        {
+          "name": "\"Ultimate Overlord's Mega Magic Sword\"",
+          "votes": 3,
+          "rarity": 4
+        },
+        { "name": "Wolf's Gravestone", "votes": 2, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Nighttime Whispers in the Echoing Woods", "votes": 10 },
+        { "name": "Golden Troupe", "votes": 7 },
+        { "name": "Shimenawa's Reminiscence", "votes": 4 },
+        { "name": "Gladiator's Finale", "votes": 3 },
+        { "name": "Marechaussee Hunter", "votes": 2 },
+        { "name": "Archaic Petra", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 20 }],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 19 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 4 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge"]
+    },
+    "10000092": {
+      "characterId": 10000092,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Redhorn Stonethresher", "votes": 2, "rarity": 5 },
+        { "name": "Rainslasher", "votes": 1, "rarity": 4 },
+        { "name": "Serpent Spine", "votes": 1, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Marechaussee Hunter", "votes": 4 },
+        { "name": "Crimson Witch of Flames", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [{ "name": "Pyro DMG Bonus", "votes": 5 }],
+        "circlet": [{ "name": "CRIT DMG", "votes": 5 }]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "Energy Recharge",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000093": {
+      "characterId": 10000093,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Oathsworn Eye", "votes": 14, "rarity": 4 },
+        { "name": "Crane's Echoing Call", "votes": 2, "rarity": 5 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 1, "rarity": 5 },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 },
+        { "name": "Favonius Codex", "votes": 1, "rarity": 4 },
+        { "name": "Sacrificial Fragments", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 11 },
+        { "name": "Song of Days Past", "votes": 7 },
+        { "name": "Gladiator's Finale", "votes": 2 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 },
+        { "name": "Deepwood Memories", "votes": 1 },
+        { "name": "Desert Pavilion Chronicle", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Energy Recharge", "votes": 4 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Anemo DMG Bonus", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "Healing Bonus", "votes": 1 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": ["ATK%", "Energy Recharge", "CRIT Rate", "CRIT DMG", "ATK"]
+    },
+    "10000094": {
+      "characterId": 10000094,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Uraku Misugiri", "votes": 6, "rarity": 5 },
+        { "name": "Harbinger of Dawn", "votes": 4, "rarity": 3 },
+        { "name": "Cinnabar Spindle", "votes": 2, "rarity": 4 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 },
+        { "name": "Light of Foliar Incision", "votes": 1, "rarity": 5 },
+        { "name": "Blackcliff Longsword", "votes": 1, "rarity": 4 },
+        { "name": "Primordial Jade Cutter", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Husk of Opulent Dreams", "votes": 9 },
+        { "name": "Golden Troupe", "votes": 8 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "DEF%", "votes": 16 }],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 12 },
+          { "name": "DEF%", "votes": 4 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "DEF%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "ATK%", "DEF"]
+    },
+    "10000095": {
+      "characterId": 10000095,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Silvershower Heartstrings", "votes": 5, "rarity": 5 },
+        { "name": "Recurve Bow", "votes": 2, "rarity": 3 },
+        { "name": "Sacrificial Bow", "votes": 1, "rarity": 4 },
+        { "name": "Blackcliff Warbow", "votes": 1, "rarity": 4 },
+        { "name": "Elegy for the End", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Song of Days Past", "votes": 6 },
+        { "name": "Ocean-Hued Clam", "votes": 3 },
+        { "name": "Tenacity of the Millelith", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "HP%", "votes": 10 }],
+        "goblet": [
+          { "name": "HP%", "votes": 9 },
+          { "name": "Hydro DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 9 },
+          { "name": "Healing Bonus", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "HP%",
+        "HP",
+        "Energy Recharge",
+        "Elemental Mastery",
+        "CRIT Rate"
+      ]
+    },
+    "10000096": {
+      "characterId": 10000096,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Crimson Moon's Semblance", "votes": 10, "rarity": 5 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 5, "rarity": 5 },
+        { "name": "White Tassel", "votes": 2, "rarity": 3 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Ballad of the Fjords", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Fragment of Harmonic Whimsy", "votes": 14 },
+        { "name": "Gladiator's Finale", "votes": 4 },
+        { "name": "Long Night's Oath", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 19 }],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 3 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Elemental Mastery",
+        "Energy Recharge"
+      ]
+    },
+    "10000097": {
+      "characterId": 10000097,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The First Great Magic", "votes": 2, "rarity": 5 },
+        { "name": "Slingshot", "votes": 1, "rarity": 3 }
+      ],
+      "sets": [
+        { "name": "Wanderer's Troupe", "votes": 2 },
+        { "name": "Gilded Dreams", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "Elemental Mastery", "votes": 3 }],
+        "goblet": [{ "name": "Electro DMG Bonus", "votes": 3 }],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000098": {
+      "characterId": 10000098,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Absolution", "votes": 9, "rarity": 5 },
+        { "name": "Mistsplitter Reforged", "votes": 2, "rarity": 5 },
+        { "name": "Finale of the Deep", "votes": 2, "rarity": 4 },
+        { "name": "Lion's Roar", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Fragment of Harmonic Whimsy", "votes": 9 },
+        { "name": "Thundering Fury", "votes": 2 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 1 },
+        { "name": "Emblem of Severed Fate", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 11 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 12 },
+          { "name": "ATK%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "ATK%", "votes": 2 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Elemental Mastery"]
+    },
+    "10000099": {
+      "characterId": 10000099,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Primordial Jade Winged-Spear", "votes": 3, "rarity": 5 },
+        { "name": "Lumidouce Elegy", "votes": 3, "rarity": 5 },
+        { "name": "Deathmatch", "votes": 2, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 2, "rarity": 5 },
+        { "name": "Missive Windspear", "votes": 1, "rarity": 4 },
+        { "name": "Blackcliff Pole", "votes": 1, "rarity": 4 },
+        { "name": "Lithic Spear", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Unfinished Reverie", "votes": 11 },
+        { "name": "Deepwood Memories", "votes": 1 },
+        { "name": "Obsidian Codex", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 10 },
+          { "name": "Energy Recharge", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Dendro DMG Bonus", "votes": 12 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "DEF%"]
+    },
+    "10000100": {
+      "characterId": 10000100,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Footprint of the Rainbow", "votes": 4, "rarity": 4 },
+        { "name": "Favonius Lance", "votes": 3, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Scroll of the Hero of Cinder City", "votes": 6 },
+        { "name": "Nighttime Whispers in the Echoing Woods", "votes": 1 },
+        { "name": "Archaic Petra", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 4 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Geo DMG Bonus", "votes": 5 },
+          { "name": "DEF%", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "DEF%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "Energy Recharge", "DEF%", "CRIT DMG", "DEF"]
+    },
+    "10000101": {
+      "characterId": 10000101,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Fang of the Mountain King", "votes": 8, "rarity": 5 },
+        { "name": "Earth Shaker", "votes": 1, "rarity": 4 },
+        { "name": "Serpent Spine", "votes": 1, "rarity": 4 },
+        { "name": "Beacon of the Reed Sea", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Obsidian Codex", "votes": 8 },
+        { "name": "Deepwood Memories", "votes": 3 },
+        { "name": "Golden Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 11 }],
+        "goblet": [
+          { "name": "Dendro DMG Bonus", "votes": 9 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000102": {
+      "characterId": 10000102,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Surf's Up", "votes": 9, "rarity": 5 },
+        { "name": "The Widsith", "votes": 3, "rarity": 4 },
+        { "name": "Ring of Yaxche", "votes": 3, "rarity": 4 },
+        { "name": "Nightweaver's Looking Glass", "votes": 1, "rarity": 5 },
+        { "name": "Jadefall's Splendor", "votes": 1, "rarity": 5 },
+        { "name": "Cashflow Supervision", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Obsidian Codex", "votes": 17 },
+        { "name": "Marechaussee Hunter", "votes": 1 },
+        { "name": "Tenacity of the Millelith", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 13 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Hydro DMG Bonus", "votes": 17 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 15 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "HP%", "Elemental Mastery", "HP"]
+    },
+    "10000103": {
+      "characterId": 10000103,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Sword", "votes": 9, "rarity": 4 },
+        { "name": "Flute of Ezpitzal", "votes": 7, "rarity": 4 },
+        { "name": "Peak Patrol Song", "votes": 3, "rarity": 5 },
+        { "name": "Calamity of Eshu", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Scroll of the Hero of Cinder City", "votes": 15 },
+        { "name": "Archaic Petra", "votes": 3 },
+        { "name": "Instructor", "votes": 1 },
+        { "name": "Retracing Bolide", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 18 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "DEF%", "votes": 18 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "Geo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "DEF%", "votes": 13 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "Healing Bonus", "votes": 2 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ]
+      },
+      "substats": ["DEF%", "Energy Recharge", "CRIT Rate", "CRIT DMG", "DEF"]
+    },
+    "10000104": {
+      "characterId": 10000104,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Astral Vulture's Crimson Plumage", "votes": 5, "rarity": 5 },
+        { "name": "The First Great Magic", "votes": 3, "rarity": 5 },
+        { "name": "Amos' Bow", "votes": 1, "rarity": 5 },
+        { "name": "Chain Breaker", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Harp", "votes": 1, "rarity": 5 },
+        { "name": "Polar Star", "votes": 1, "rarity": 5 },
+        { "name": "Scion of the Blazing Sun", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Obsidian Codex", "votes": 12 },
+        { "name": "Viridescent Venerer", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 12 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 10 },
+          { "name": "Anemo DMG Bonus", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 12 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery", "ATK"]
+    },
+    "10000105": {
+      "characterId": 10000105,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Bow", "votes": 2, "rarity": 4 },
+        { "name": "Thundering Pulse", "votes": 1, "rarity": 5 },
+        { "name": "Chain Breaker", "votes": 1, "rarity": 4 },
+        { "name": "Rainbow Serpent's Rain Bow", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Scroll of the Hero of Cinder City", "votes": 4 },
+        { "name": "Thundering Fury", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 3 },
+          { "name": "Energy Recharge", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Electro DMG Bonus", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "CRIT DMG", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "Energy Recharge",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000106": {
+      "characterId": 10000106,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "A Thousand Blazing Suns", "votes": 11, "rarity": 5 },
+        { "name": "Wolf's Gravestone", "votes": 4, "rarity": 5 },
+        { "name": "Verdict", "votes": 2, "rarity": 5 },
+        { "name": "Fang of the Mountain King", "votes": 1, "rarity": 5 },
+        { "name": "Prototype Archaic", "votes": 1, "rarity": 4 },
+        { "name": "Forest Regalia", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Obsidian Codex", "votes": 16 },
+        { "name": "Scroll of the Hero of Cinder City", "votes": 3 },
+        { "name": "Crimson Witch of Flames", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 15 },
+          { "name": "Elemental Mastery", "votes": 4 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 18 },
+          { "name": "ATK%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 17 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery", "ATK"]
+    },
+    "10000107": {
+      "characterId": 10000107,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Starcaller's Watch", "votes": 7, "rarity": 5 },
+        { "name": "Sacrificial Fragments", "votes": 5, "rarity": 4 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 4,
+          "rarity": 3
+        },
+        { "name": "A Thousand Floating Dreams", "votes": 1, "rarity": 5 },
+        { "name": "Surf's Up", "votes": 1, "rarity": 5 },
+        { "name": "The Widsith", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Scroll of the Hero of Cinder City", "votes": 15 },
+        { "name": "Tenacity of the Millelith", "votes": 2 },
+        { "name": "Gilded Dreams", "votes": 1 },
+        { "name": "Instructor", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 11 },
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 14 },
+          { "name": "Cryo DMG Bonus", "votes": 4 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "DEF%", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "Elemental Mastery",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK"
+      ]
+    },
+    "10000108": {
+      "characterId": 10000108,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 6,
+          "rarity": 3
+        },
+        { "name": "Sacrificial Fragments", "votes": 4, "rarity": 4 },
+        { "name": "The Widsith", "votes": 2, "rarity": 4 },
+        { "name": "Flowing Purity", "votes": 1, "rarity": 4 },
+        { "name": "Eye of Perception", "votes": 1, "rarity": 4 },
+        { "name": "Starcaller's Watch", "votes": 1, "rarity": 5 },
+        { "name": "Oathsworn Eye", "votes": 1, "rarity": 4 },
+        { "name": "Wandering Evenstar", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 14 },
+        { "name": "Scarlet Proof", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 13 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 14 },
+          { "name": "Elemental Mastery", "votes": 2 },
+          { "name": "Anemo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 13 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "ATK%",
+        "CRIT Rate",
+        "Energy Recharge",
+        "CRIT DMG",
+        "Elemental Mastery"
+      ]
+    },
+    "10000109": {
+      "characterId": 10000109,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Fragments", "votes": 6, "rarity": 4 },
+        { "name": "The Widsith", "votes": 5, "rarity": 4 },
+        { "name": "Sunny Morning Sleep-In", "votes": 4, "rarity": 5 },
+        { "name": "A Thousand Floating Dreams", "votes": 1, "rarity": 5 },
+        { "name": "Surf's Up", "votes": 1, "rarity": 5 },
+        { "name": "Dawning Frost", "votes": 1, "rarity": 4 },
+        { "name": "Starcaller's Watch", "votes": 1, "rarity": 5 },
+        { "name": "Lost Prayer to the Sacred Winds", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Gilded Dreams", "votes": 6 },
+        { "name": "Viridescent Venerer", "votes": 5 },
+        { "name": "Scarlet Proof", "votes": 4 },
+        { "name": "Wanderer's Troupe", "votes": 3 },
+        { "name": "Night of the Sky's Unveiling", "votes": 2 },
+        { "name": "Aubade of Morningstar and Moon", "votes": 2 },
+        { "name": "Heart of the Furnace", "votes": 1 },
+        { "name": "Song of Days Past", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 17 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 17 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 8 },
+          { "name": "CRIT DMG", "votes": 6 },
+          { "name": "Elemental Mastery", "votes": 4 },
+          { "name": "ATK%", "votes": 2 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Elemental Mastery",
+        "Energy Recharge",
+        "ATK%"
+      ]
+    },
+    "10000110": {
+      "characterId": 10000110,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 2, "rarity": 4 },
+        { "name": "Tamayuratei no Ohanashi", "votes": 2, "rarity": 4 },
+        { "name": "Symphonist of Scents", "votes": 1, "rarity": 5 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 3 },
+        { "name": "Scroll of the Hero of Cinder City", "votes": 3 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 4 },
+          { "name": "Energy Recharge", "votes": 2 }
+        ],
+        "goblet": [{ "name": "ATK%", "votes": 6 }],
+        "circlet": [
+          { "name": "ATK%", "votes": 5 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": ["Energy Recharge", "ATK%", "CRIT Rate", "ATK", "CRIT DMG"]
+    },
+    "10000111": {
+      "characterId": 10000111,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Widsith", "votes": 3, "rarity": 4 },
+        { "name": "Memory of Dust", "votes": 1, "rarity": 5 },
+        { "name": "Vivid Notions", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Obsidian Codex", "votes": 3 },
+        { "name": "Long Night's Oath", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [{ "name": "Electro DMG Bonus", "votes": 5 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 3 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000112": {
+      "characterId": 10000112,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 7, "rarity": 4 },
+        { "name": "Symphonist of Scents", "votes": 6, "rarity": 5 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Tamayuratei no Ohanashi", "votes": 1, "rarity": 4 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 1, "rarity": 5 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 },
+        { "name": "Blackcliff Pole", "votes": 1, "rarity": 4 },
+        { "name": "Staff of Homa", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Golden Troupe", "votes": 15 },
+        { "name": "Tenacity of the Millelith", "votes": 3 },
+        { "name": "Blizzard Strayer", "votes": 2 },
+        { "name": "Marechaussee Hunter", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 15 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 10 },
+          { "name": "ATK%", "votes": 8 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Energy Recharge",
+        "ATK%",
+        "Elemental Mastery"
+      ]
+    },
+    "10000113": {
+      "characterId": 10000113,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "The Widsith", "votes": 5, "rarity": 4 },
+        { "name": "Sacrificial Fragments", "votes": 2, "rarity": 4 },
+        { "name": "Cashflow Supervision", "votes": 1, "rarity": 5 },
+        { "name": "Skyward Atlas", "votes": 1, "rarity": 5 },
+        { "name": "Hakushin Ring", "votes": 1, "rarity": 4 },
+        { "name": "A Thousand Floating Dreams", "votes": 1, "rarity": 5 },
+        { "name": "Wandering Evenstar", "votes": 1, "rarity": 4 },
+        { "name": "Mappa Mare", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Obsidian Codex", "votes": 6 },
+        { "name": "Viridescent Venerer", "votes": 6 },
+        { "name": "Flower of Paradise Lost", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 7 },
+          { "name": "ATK%", "votes": 6 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "Anemo DMG Bonus", "votes": 5 },
+          { "name": "ATK%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 5 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 2 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "Healing Bonus", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "Elemental Mastery",
+        "Energy Recharge",
+        "ATK%"
+      ]
+    },
+    "10000114": {
+      "characterId": 10000114,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Azurelight", "votes": 4, "rarity": 5 },
+        { "name": "Finale of the Deep", "votes": 3, "rarity": 4 },
+        { "name": "Uraku Misugiri", "votes": 2, "rarity": 5 },
+        { "name": "Absolution", "votes": 2, "rarity": 5 },
+        { "name": "Skyward Blade", "votes": 1, "rarity": 5 },
+        { "name": "Exaiphanes Blade", "votes": 1, "rarity": 5 },
+        { "name": "Whitelake Frostfeather", "votes": 1, "rarity": 5 },
+        { "name": "Light of Foliar Incision", "votes": 1, "rarity": 5 },
+        { "name": "Haran Geppaku Futsu", "votes": 1, "rarity": 5 },
+        { "name": "Mistsplitter Reforged", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Finale of the Deep Galleries", "votes": 15 },
+        { "name": "Marechaussee Hunter", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 14 },
+          { "name": "HP%", "votes": 2 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 15 },
+          { "name": "ATK%", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 7 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK"]
+    },
+    "10000115": {
+      "characterId": 10000115,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Sacrificial Sword", "votes": 3, "rarity": 4 },
+        { "name": "Favonius Sword", "votes": 2, "rarity": 4 },
+        { "name": "Serenity's Call", "votes": 1, "rarity": 4 },
+        { "name": "Fleuve Cendre Ferryman", "votes": 1, "rarity": 4 },
+        { "name": "Key of Khaj-Nisut", "votes": 1, "rarity": 5 },
+        { "name": "Exaiphanes Blade", "votes": 1, "rarity": 5 },
+        { "name": "The Flute", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 6 },
+        { "name": "Tenacity of the Millelith", "votes": 2 },
+        { "name": "Vourukasha's Glow", "votes": 1 },
+        { "name": "Viridescent Venerer", "votes": 1 },
+        { "name": "Wanderer's Troupe", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 6 },
+          { "name": "HP%", "votes": 4 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "Hydro DMG Bonus", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "HP%", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 2 }
+        ]
+      },
+      "substats": ["HP%", "Energy Recharge", "HP", "CRIT Rate", "CRIT DMG"]
+    },
+    "10000116": {
+      "characterId": 10000116,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Fractured Halo", "votes": 3, "rarity": 5 },
+        { "name": "Prospector's Shovel", "votes": 2, "rarity": 4 },
+        { "name": "Sacrificer's Staff", "votes": 1, "rarity": 4 },
+        { "name": "Ballad of the Fjords", "votes": 1, "rarity": 4 },
+        { "name": "Vortex Vanquisher", "votes": 1, "rarity": 5 },
+        { "name": "Missive Windspear", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Silken Moon's Serenade", "votes": 3 },
+        { "name": "Aubade of Morningstar and Moon", "votes": 3 },
+        { "name": "Gilded Dreams", "votes": 2 },
+        { "name": "Night of the Sky's Unveiling", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 9 }],
+        "goblet": [{ "name": "ATK%", "votes": 9 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "CRIT Rate", "votes": 4 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000119": {
+      "characterId": 10000119,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Nightweaver's Looking Glass", "votes": 5, "rarity": 5 },
+        { "name": "Blackmarrow Lantern", "votes": 4, "rarity": 4 },
+        { "name": "Sacrificial Fragments", "votes": 3, "rarity": 4 },
+        { "name": "Eye of Perception", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Silken Moon's Serenade", "votes": 10 },
+        { "name": "Deepwood Memories", "votes": 2 },
+        { "name": "Aubade of Morningstar and Moon", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 10 },
+          { "name": "Energy Recharge", "votes": 2 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 9 },
+          { "name": "Dendro DMG Bonus", "votes": 3 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%"
+      ]
+    },
+    "10000120": {
+      "characterId": 10000120,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Bloodsoaked Ruins", "votes": 7, "rarity": 5 },
+        { "name": "Fractured Halo", "votes": 1, "rarity": 5 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 },
+        { "name": "Prospector's Shovel", "votes": 1, "rarity": 4 },
+        { "name": "Blackcliff Pole", "votes": 1, "rarity": 4 },
+        { "name": "Ballad of the Fjords", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Night of the Sky's Unveiling", "votes": 12 }],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 10 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 9 },
+          { "name": "Electro DMG Bonus", "votes": 1 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 11 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "Energy Recharge", "ATK"]
+    },
+    "10000121": {
+      "characterId": 10000121,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Flame-Forged Insight", "votes": 5, "rarity": 4 },
+        { "name": "Favonius Greatsword", "votes": 3, "rarity": 4 },
+        { "name": "Master Key", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Silken Moon's Serenade", "votes": 9 }],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 4 },
+          { "name": "Energy Recharge", "votes": 4 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 6 },
+          { "name": "Hydro DMG Bonus", "votes": 2 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 4 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "HP%", "votes": 1 },
+          { "name": "ATK%", "votes": 1 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "Elemental Mastery",
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%"
+      ]
+    },
+    "10000122": {
+      "characterId": 10000122,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Reliquary of Truth", "votes": 4, "rarity": 5 },
+        { "name": "Blackmarrow Lantern", "votes": 2, "rarity": 4 },
+        { "name": "The Widsith", "votes": 2, "rarity": 4 },
+        { "name": "Dawning Frost", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Night of the Sky's Unveiling", "votes": 9 }],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 8 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Elemental Mastery", "votes": 7 },
+          { "name": "DEF%", "votes": 1 },
+          { "name": "Dendro DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 5 },
+          { "name": "CRIT Rate", "votes": 4 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "Elemental Mastery", "ATK", "HP"]
+    },
+    "10000123": {
+      "characterId": 10000123,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Athame Artis", "votes": 4, "rarity": 5 },
+        { "name": "Moonweaver's Dawn", "votes": 3, "rarity": 4 },
+        { "name": "Exaiphanes Blade", "votes": 2, "rarity": 5 },
+        { "name": "Mistsplitter Reforged", "votes": 2, "rarity": 5 },
+        { "name": "Skyward Blade", "votes": 1, "rarity": 5 },
+        { "name": "Prototype Rancour", "votes": 1, "rarity": 4 },
+        { "name": "Xiphos' Moonlight", "votes": 1, "rarity": 4 },
+        { "name": "Absolution", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "A Day Carved From Rising Winds", "votes": 11 },
+        { "name": "Emblem of Severed Fate", "votes": 2 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Crimson Witch of Flames", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 13 },
+          { "name": "Elemental Mastery", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "Pyro DMG Bonus", "votes": 9 },
+          { "name": "ATK%", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 9 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000124": {
+      "characterId": 10000124,
+      "role": "Healer",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Warbow", "votes": 6, "rarity": 4 },
+        { "name": "Rainbow Serpent's Rain Bow", "votes": 5, "rarity": 4 },
+        { "name": "Elegy for the End", "votes": 4, "rarity": 5 },
+        { "name": "Snare Hook", "votes": 1, "rarity": 4 },
+        { "name": "Sharpshooter's Oath", "votes": 1, "rarity": 3 },
+        { "name": "Range Gauge", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 8 },
+        { "name": "Silken Moon's Serenade", "votes": 6 },
+        { "name": "Instructor", "votes": 2 },
+        { "name": "Song of Days Past", "votes": 2 },
+        { "name": "Emblem of Severed Fate", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 12 },
+          { "name": "ATK%", "votes": 5 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "Anemo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "Healing Bonus", "votes": 12 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "Energy Recharge",
+        "ATK%",
+        "CRIT Rate",
+        "Elemental Mastery",
+        "CRIT DMG"
+      ]
+    },
+    "10000125": {
+      "characterId": 10000125,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Nocturne's Curtain Call", "votes": 8, "rarity": 5 },
+        { "name": "Prototype Amber", "votes": 4, "rarity": 4 },
+        { "name": "Dawning Frost", "votes": 2, "rarity": 4 },
+        { "name": "Favonius Codex", "votes": 2, "rarity": 4 },
+        { "name": "Ash-Graven Drinking Horn", "votes": 2, "rarity": 4 },
+        { "name": "Skyward Atlas", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Silken Moon's Serenade", "votes": 10 },
+        { "name": "Aubade of Morningstar and Moon", "votes": 8 },
+        { "name": "Night of the Sky's Unveiling", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "HP%", "votes": 11 },
+          { "name": "Energy Recharge", "votes": 7 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "HP%", "votes": 17 },
+          { "name": "Hydro DMG Bonus", "votes": 1 },
+          { "name": "ATK%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 12 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "HP%", "votes": 3 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "HP%", "Energy Recharge", "HP"]
+    },
+    "10000126": {
+      "characterId": 10000126,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Lightbearing Moonshard", "votes": 11, "rarity": 5 },
+        { "name": "Harbinger of Dawn", "votes": 4, "rarity": 3 },
+        { "name": "Light of Foliar Incision", "votes": 2, "rarity": 5 },
+        { "name": "Flute of Ezpitzal", "votes": 1, "rarity": 4 },
+        { "name": "Cinnabar Spindle", "votes": 1, "rarity": 4 },
+        { "name": "Uraku Misugiri", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [{ "name": "Night of the Sky's Unveiling", "votes": 20 }],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 18 },
+          { "name": "Elemental Mastery", "votes": 1 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "goblet": [{ "name": "DEF%", "votes": 20 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 14 },
+          { "name": "CRIT Rate", "votes": 4 },
+          { "name": "DEF%", "votes": 2 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "DEF%", "DEF", "Elemental Mastery"]
+    },
+    "10000127": {
+      "characterId": 10000127,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 9, "rarity": 4 },
+        { "name": "Dragon's Bane", "votes": 8, "rarity": 4 },
+        { "name": "Kitain Cross Spear", "votes": 1, "rarity": 4 },
+        { "name": "Prototype Starglitter", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Silken Moon's Serenade", "votes": 16 },
+        { "name": "Gilded Dreams", "votes": 6 },
+        { "name": "Wanderer's Troupe", "votes": 2 },
+        { "name": "Aubade of Morningstar and Moon", "votes": 1 },
+        { "name": "Noblesse Oblige", "votes": 1 },
+        { "name": "Night of the Sky's Unveiling", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Elemental Mastery", "votes": 15 },
+          { "name": "Energy Recharge", "votes": 5 }
+        ],
+        "goblet": [{ "name": "Elemental Mastery", "votes": 20 }],
+        "circlet": [
+          { "name": "Elemental Mastery", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 4 }
+        ]
+      },
+      "substats": [
+        "Elemental Mastery",
+        "Energy Recharge",
+        "CRIT Rate",
+        "CRIT DMG",
+        "DEF%"
+      ]
+    },
+    "10000128": {
+      "characterId": 10000128,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Gest of the Mighty Wolf", "votes": 15, "rarity": 5 },
+        { "name": "Wolf's Gravestone", "votes": 2, "rarity": 5 },
+        { "name": "Earth Shaker", "votes": 1, "rarity": 4 },
+        { "name": "A Thousand Blazing Suns", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "A Day Carved From Rising Winds", "votes": 12 },
+        { "name": "Gladiator's Finale", "votes": 7 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 19 }],
+        "goblet": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Anemo DMG Bonus", "votes": 1 },
+          { "name": "Electro DMG Bonus", "votes": 1 },
+          { "name": "Pyro DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 16 },
+          { "name": "CRIT Rate", "votes": 2 },
+          { "name": "ATK%", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT Rate", "CRIT DMG", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000129": {
+      "characterId": 10000129,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Disaster and Remorse", "votes": 5, "rarity": 5 },
+        { "name": "Primordial Jade Winged-Spear", "votes": 2, "rarity": 5 },
+        { "name": "Sacrificer's Staff", "votes": 2, "rarity": 4 },
+        { "name": "Favonius Lance", "votes": 2, "rarity": 4 },
+        { "name": "White Tassel", "votes": 2, "rarity": 3 },
+        { "name": "Deathmatch", "votes": 1, "rarity": 4 },
+        { "name": "Bloodsoaked Ruins", "votes": 1, "rarity": 5 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "A Day Carved From Rising Winds", "votes": 13 },
+        { "name": "Obsidian Codex", "votes": 1 },
+        { "name": "Silken Moon's Serenade", "votes": 1 },
+        { "name": "Gladiator's Finale", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 15 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "Cryo DMG Bonus", "votes": 12 },
+          { "name": "ATK%", "votes": 3 },
+          { "name": "Anemo DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 8 },
+          { "name": "CRIT Rate", "votes": 5 },
+          { "name": "ATK%", "votes": 2 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "ATK", "Energy Recharge"]
+    },
+    "10000130": {
+      "characterId": 10000130,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Skyward Harp", "votes": 5, "rarity": 5 },
+        { "name": "Slingshot", "votes": 4, "rarity": 3 },
+        { "name": "Golden Frostbound Oath", "votes": 4, "rarity": 5 },
+        { "name": "Favonius Warbow", "votes": 2, "rarity": 4 },
+        { "name": "Aqua Simulacra", "votes": 2, "rarity": 5 },
+        { "name": "Blackcliff Warbow", "votes": 1, "rarity": 4 },
+        { "name": "The Stringless", "votes": 1, "rarity": 4 },
+        { "name": "Snare Hook", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Aubade of Morningstar and Moon", "votes": 14 },
+        { "name": "Husk of Opulent Dreams", "votes": 4 },
+        { "name": "Silken Moon's Serenade", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "DEF%", "votes": 18 },
+          { "name": "Energy Recharge", "votes": 2 }
+        ],
+        "goblet": [
+          { "name": "DEF%", "votes": 19 },
+          { "name": "HP%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT Rate", "votes": 10 },
+          { "name": "CRIT DMG", "votes": 7 },
+          { "name": "DEF%", "votes": 3 }
+        ]
+      },
+      "substats": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "DEF%",
+        "Energy Recharge",
+        "Elemental Mastery"
+      ]
+    },
+    "10000131": {
+      "characterId": 10000131,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Skyward Atlas", "votes": 6, "rarity": 5 },
+        { "name": "Angelos' Heptades", "votes": 4, "rarity": 5 },
+        { "name": "Eye of Perception", "votes": 2, "rarity": 4 },
+        { "name": "Oathsworn Eye", "votes": 1, "rarity": 4 },
+        { "name": "Wine and Song", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Celestial Gift", "votes": 12 },
+        { "name": "Aubade of Morningstar and Moon", "votes": 1 },
+        { "name": "Shimenawa's Reminiscence", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 14 }],
+        "goblet": [{ "name": "ATK%", "votes": 14 }],
+        "circlet": [{ "name": "ATK%", "votes": 14 }]
+      },
+      "substats": ["ATK%", "Energy Recharge", "ATK", "CRIT Rate", "CRIT DMG"]
+    },
+    "10000132": {
+      "characterId": 10000132,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Codex", "votes": 8, "rarity": 4 },
+        { "name": "Skyward Atlas", "votes": 5, "rarity": 5 },
+        { "name": "Flowing Purity", "votes": 3, "rarity": 4 },
+        {
+          "name": "Thrilling Tales of Dragon Slayers",
+          "votes": 2,
+          "rarity": 3
+        },
+        { "name": "Oathsworn Eye", "votes": 2, "rarity": 4 }
+      ],
+      "sets": [
+        { "name": "Viridescent Venerer", "votes": 16 },
+        { "name": "Noblesse Oblige", "votes": 2 },
+        { "name": "Celestial Gift", "votes": 1 },
+        { "name": "Night of the Sky's Unveiling", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 16 },
+          { "name": "Energy Recharge", "votes": 3 },
+          { "name": "Elemental Mastery", "votes": 1 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 18 },
+          { "name": "Anemo DMG Bonus", "votes": 2 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 17 },
+          { "name": "CRIT Rate", "votes": 3 }
+        ]
+      },
+      "substats": ["ATK%", "Energy Recharge", "ATK", "CRIT Rate", "CRIT DMG"]
+    },
+    "10000133": {
+      "characterId": 10000133,
+      "role": "DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "A Teaspoon of Transcendence", "votes": 5, "rarity": 5 },
+        { "name": "Tidal Shadow", "votes": 2, "rarity": 4 },
+        { "name": "Wolf's Gravestone", "votes": 1, "rarity": 5 },
+        { "name": "Talking Stick", "votes": 1, "rarity": 4 },
+        { "name": "Blade of Atonement", "votes": 1, "rarity": 4 },
+        { "name": "Redhorn Stonethresher", "votes": 1, "rarity": 5 },
+        { "name": "Rainslasher", "votes": 1, "rarity": 4 }
+      ],
+      "sets": [{ "name": "Disenchantment in Deep Shadow", "votes": 12 }],
+      "mainStats": {
+        "sands": [{ "name": "ATK%", "votes": 12 }],
+        "goblet": [
+          { "name": "ATK%", "votes": 11 },
+          { "name": "DEF%", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 2 }
+        ]
+      },
+      "substats": ["CRIT DMG", "CRIT Rate", "ATK%", "Elemental Mastery", "ATK"]
+    },
+    "10000148": {
+      "characterId": 10000148,
+      "role": "Support",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Favonius Lance", "votes": 5, "rarity": 4 },
+        { "name": "Symphonist of Scents", "votes": 4, "rarity": 5 },
+        { "name": "Engulfing Lightning", "votes": 2, "rarity": 5 },
+        { "name": "Prospector's Shovel", "votes": 1, "rarity": 4 },
+        { "name": "Skyward Spine", "votes": 1, "rarity": 5 },
+        { "name": "White Tassel", "votes": 1, "rarity": 3 }
+      ],
+      "sets": [
+        { "name": "Noblesse Oblige", "votes": 11 },
+        { "name": "Celestial Gift", "votes": 1 },
+        { "name": "A Day Carved From Rising Winds", "votes": 1 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 1 },
+        { "name": "Heart of the Furnace", "votes": 1 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "Energy Recharge", "votes": 10 },
+          { "name": "ATK%", "votes": 4 }
+        ],
+        "goblet": [
+          { "name": "ATK%", "votes": 11 },
+          { "name": "Electro DMG Bonus", "votes": 2 },
+          { "name": "Physical DMG Bonus", "votes": 1 }
+        ],
+        "circlet": [
+          { "name": "ATK%", "votes": 10 },
+          { "name": "CRIT Rate", "votes": 3 },
+          { "name": "CRIT DMG", "votes": 1 }
+        ]
+      },
+      "substats": ["Energy Recharge", "ATK%", "CRIT Rate", "CRIT DMG", "ATK"]
+    },
+    "10000150": {
+      "characterId": 10000150,
+      "role": "Sub-DPS",
+      "sampleSize": 20,
+      "strategyUrl": "https://www.hoyolab.com/guidesecondarypage/role?game_id=2&guide_id=63b562cf6350925ce9c617fe&tab_id=63b63aefc61f3cbe3ead18d9&utm_source=hoyolab&utm_medium=tools&utm_campaign=lineup&utm_id=2",
+      "weapons": [
+        { "name": "Whitelake Frostfeather", "votes": 6, "rarity": 5 },
+        { "name": "Finale of the Deep", "votes": 3, "rarity": 4 },
+        { "name": "Wolf-Fang", "votes": 2, "rarity": 4 },
+        { "name": "Emberwell", "votes": 1, "rarity": 4 },
+        { "name": "Freedom-Sworn", "votes": 1, "rarity": 5 },
+        { "name": "Exaiphanes Blade", "votes": 1, "rarity": 5 }
+      ],
+      "sets": [
+        { "name": "Heart of the Furnace", "votes": 13 },
+        { "name": "Disenchantment in Deep Shadow", "votes": 2 }
+      ],
+      "mainStats": {
+        "sands": [
+          { "name": "ATK%", "votes": 13 },
+          { "name": "Energy Recharge", "votes": 1 }
+        ],
+        "goblet": [{ "name": "ATK%", "votes": 14 }],
+        "circlet": [
+          { "name": "CRIT DMG", "votes": 13 },
+          { "name": "CRIT Rate", "votes": 1 }
+        ]
+      },
+      "substats": [
+        "CRIT DMG",
+        "CRIT Rate",
+        "ATK%",
+        "Elemental Mastery",
+        "Energy Recharge"
+      ]
+    }
+  }
+}

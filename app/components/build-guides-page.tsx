@@ -3,8 +3,12 @@
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { findGuide, type BuildGuide, type GuideWeapon } from "@/lib/build-guides";
+import { consensusToGuide } from "@/lib/hoyolab-lineup";
 import {
-  findCharacterGuide,
+  getBundledConsensusByName,
+  hasCommunityGuideByName,
+} from "@/lib/consensus-data";
+import {
   iconUrl,
   loadCharacterGuides,
   normalizeName,
@@ -348,7 +352,10 @@ export function BuildGuidesPage({
   const selectedGuide = selected ? data?.characters[selected] ?? null : null;
 
   if (selectedGuide) {
-    const build = findGuide(selectedGuide.name);
+    const community = getBundledConsensusByName(selectedGuide.name);
+    const build =
+      findGuide(selectedGuide.name) ??
+      (community ? consensusToGuide(community) : null);
     const farming = farmingData
       ? findFarmingCharacter(farmingData, selectedGuide.name)
       : null;
@@ -417,7 +424,8 @@ export function BuildGuidesPage({
           const ownedCharacter = ownedByName.get(key);
           const isPriority =
             ownedCharacter && prioritySet.has(ownedCharacter.id);
-          const hasBuild = findGuide(c.name) !== null;
+          const hasBuild =
+            findGuide(c.name) !== null || hasCommunityGuideByName(c.name);
           const icon = iconUrl(c.icon);
           return (
             <button

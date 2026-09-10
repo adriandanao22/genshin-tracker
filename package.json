@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "extract-gamedata": "node scripts/extract-game-data.mjs",
-    "extract-map": "node scripts/extract-map.mjs"
+    "extract-map": "node scripts/extract-map.mjs",
+    "extract-consensus": "node scripts/extract-consensus.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.115.0",

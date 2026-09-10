@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { findGuide } from "@/lib/build-guides";
+import { hasCommunityGuide } from "@/lib/consensus-data";
 import type { RosterCharacter } from "@/lib/hoyolab-game-record";
 import { elementTone } from "./character-detail-modal";
 
@@ -150,7 +151,8 @@ export function RosterWall({
                     >
                       {"★".repeat(character.rarity)}
                     </span>
-                    {findGuide(character.name) && (
+                    {(findGuide(character.name) ||
+                      hasCommunityGuide(character.id)) && (
                       <span className="guide-badge inline">Guide</span>
                     )}
                   </span>

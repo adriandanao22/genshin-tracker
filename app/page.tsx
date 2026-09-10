@@ -736,6 +736,8 @@ export default function Home() {
               : []
           }
           activeComp={activeComp}
+          inventory={inventory}
+          onInventoryChange={updateInventory}
           error={detailError}
           onRefresh={
             openCharId != null
