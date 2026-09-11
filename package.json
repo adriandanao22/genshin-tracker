@@ -27,5 +27,6 @@
     "genshin-db": "^5.2.13",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@12.3.4"
 }
