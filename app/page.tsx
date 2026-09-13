@@ -120,15 +120,16 @@ export default function Home() {
   const [connected, setConnected] = useState(false);
   const [activeTab, setActiveTab] = useState("Overview");
   const [connectionOpen, setConnectionOpen] = useState(false);
-  const [connectionMode, setConnectionMode] = useState<"hoyolab" | "uid">(
-    "uid",
-  );
+  const [connectionMode, setConnectionMode] = useState<
+    "hoyolab" | "uid" | "cookies"
+  >("uid");
   const [connectionState, setConnectionState] = useState<
     "idle" | "connecting" | "captcha" | "error"
   >("idle");
   const [connectionError, setConnectionError] = useState("");
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const [uidForm, setUidForm] = useState("");
+  const [cookieForm, setCookieForm] = useState({ ltuid: "", ltoken: "" });
   const [roster, setRoster] = useState<RosterCharacter[] | null>(null);
   const [rosterError, setRosterError] = useState("");
   const [priorityIds, setPriorityIds] = useState<number[]>([]);
@@ -317,6 +318,7 @@ export default function Home() {
     setConnectionState("idle");
     setLoginForm({ email: "", password: "" });
     setUidForm("");
+    setCookieForm({ ltuid: "", ltoken: "" });
   }
 
   function solveCaptcha(captcha: GeetestChallenge) {
@@ -404,9 +406,31 @@ export default function Home() {
     }
   }
 
+  async function submitCookies() {
+    setConnectionState("connecting");
+    setConnectionError("");
+    try {
+      const response = await fetch("/api/hoyolab/connect", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ltuid: cookieForm.ltuid.trim(),
+          ltoken: cookieForm.ltoken.trim(),
+        }),
+      });
+      const data = await response.json();
+      if (!response.ok)
+        throw new Error(data.error || "Could not connect with those cookies.");
+      completeConnection(data.player);
+    } catch (error) {
+      failConnection(error);
+    }
+  }
+
   function connectHoyoLab(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     if (connectionMode === "uid") submitUid();
+    else if (connectionMode === "cookies") submitCookies();
     else submitLogin();
   }
 
@@ -592,8 +616,10 @@ export default function Home() {
               <>
                 <p className="modal-intro">
                   {connectionMode === "uid"
-                    ? "Just your in-game UID — we read your public Character Showcase from Enka.network. No login, no password, nothing to store."
-                    : "Sign in with your HoYoLAB account for your full roster and live resin. Your password is only forwarded to HoYoLAB and never stored."}
+                    ? "Just your in-game UID — we read your public Character Showcase from Enka.network. Works no matter how you sign in to the game (Google, Facebook, Apple, X, or email) — no login, nothing stored."
+                    : connectionMode === "cookies"
+                      ? "Paste your HoYoLAB session cookies for your full roster and live resin. This works with any login method — Google, Facebook, and the rest — since it uses the session your browser already has."
+                      : "Sign in with your HoYoLAB email & password for your full roster and live resin. Password is only forwarded to HoYoLAB, never stored. Signed in with Google/Facebook/etc.? Use UID or Cookies instead."}
                 </p>
                 <div className="filter-tabs mode-tabs">
                   <button
@@ -610,7 +636,16 @@ export default function Home() {
                     }
                     onClick={() => setConnectionMode("hoyolab")}
                   >
-                    Login via HoYoLAB
+                    HoYoLAB login
+                  </button>
+                  <button
+                    type="button"
+                    className={
+                      connectionMode === "cookies" ? "active-filter" : ""
+                    }
+                    onClick={() => setConnectionMode("cookies")}
+                  >
+                    Cookies
                   </button>
                 </div>
                 <form onSubmit={connectHoyoLab} className="connection-form">
@@ -649,6 +684,45 @@ export default function Home() {
                         />
                       </label>
                     </>
+                  ) : connectionMode === "cookies" ? (
+                    <>
+                      <label className="full-width">
+                        ltuid_v2
+                        <input
+                          required
+                          autoComplete="off"
+                          placeholder="e.g. 12345678"
+                          value={cookieForm.ltuid}
+                          onChange={(event) =>
+                            setCookieForm({
+                              ...cookieForm,
+                              ltuid: event.target.value,
+                            })
+                          }
+                        />
+                      </label>
+                      <label className="full-width">
+                        ltoken_v2
+                        <input
+                          required
+                          type="password"
+                          autoComplete="off"
+                          placeholder="v2_..."
+                          value={cookieForm.ltoken}
+                          onChange={(event) =>
+                            setCookieForm({
+                              ...cookieForm,
+                              ltoken: event.target.value,
+                            })
+                          }
+                        />
+                      </label>
+                      <p className="form-hint">
+                        On <b>hoyolab.com</b> while logged in: open your browser
+                        DevTools (F12) → <b>Application</b> → <b>Cookies</b> →
+                        copy the <b>ltuid_v2</b> and <b>ltoken_v2</b> values.
+                      </p>
+                    </>
                   ) : (
                     <label className="full-width">
                       In-game UID
@@ -685,14 +759,18 @@ export default function Home() {
                         ? "Waiting for captcha..."
                         : connectionMode === "hoyolab"
                           ? "Sign in and connect"
-                          : "Connect by UID"}
+                          : connectionMode === "cookies"
+                            ? "Connect with cookies"
+                            : "Connect by UID"}
                     <span>→</span>
                   </button>
                 </form>
                 <p className="privacy-note">
                   {connectionMode === "hoyolab"
                     ? "Your UID and server are detected automatically. Only the login cookies HoYoLAB returns are kept, encrypted, on this browser."
-                    : "Your UID is public — it only reads what your in-game Showcase already shares. No login, no credentials, nothing sensitive stored."}
+                    : connectionMode === "cookies"
+                      ? "These cookies are your HoYoLAB session — treat them like a password. Stored encrypted on this browser only, never shared. Revoke anytime by logging out of HoYoLAB."
+                      : "Your UID is public — it only reads what your in-game Showcase already shares. No login, no credentials, nothing sensitive stored."}
                 </p>
               </>
             )}
